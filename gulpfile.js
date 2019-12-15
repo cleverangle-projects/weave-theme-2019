@@ -32,7 +32,7 @@ gulp.task('sass', function() {
 gulp.task('serve', gulp.series('sass', function() {
   browserSync.init({
     port: 8116,
-    proxy: "http://weave.local/" // <-- change this here.
+    proxy: "http://weave.loc/" // <-- change this here.
 
   });
 

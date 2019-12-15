@@ -8,7 +8,7 @@
     "url": "https://github.com/cleverangle_projects/gulp-wp-starter"
   },
   "author": "CLEVERANGLE",
-  "main": "gulpfile.js",
+  "main": "Gulpfile.js",
   "dependencies": {},
   "devDependencies": {
     "breakpoint-sass": "^2.7.0",
