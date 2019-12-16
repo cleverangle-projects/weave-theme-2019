@@ -65,6 +65,10 @@
 
         + .box-inner {
           margin: 0;
+          min-width: auto;
+          width: 90vw;
+          padding-left: 5vw;
+          padding-right: 5vw;
 
           .overlay {
             opacity: 1;
@@ -162,11 +166,13 @@
       }
 
       @media (max-width: 767px) {
+        margin-top: 4em;
         flex-direction: column;
 
         label {
           padding-top: 0;
           padding-bottom: 0;
+          line-height: 0;
 
           input {
             margin: 0 !important;
