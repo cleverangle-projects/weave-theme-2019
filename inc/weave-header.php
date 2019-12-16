@@ -44,6 +44,7 @@
         </ul>
       </div>
     </div>
+    <div id="hamburger-btn"></div>
     <nav id="menu" data-rellax-speed="-4" data-rellax-zindex="10"r>
       <?php //wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 
@@ -55,5 +56,4 @@
         <li class="page_item page-item-2490"><a href="/contact-us/">Contact Us</a></li>
       </ul>
     </nav>
-    <div id="hamburger-btn">
   </header>
