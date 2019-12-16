@@ -34,6 +34,12 @@
   margin-bottom: 0;
   color: #fff;
 
+  .box-type-image {
+    @media (max-width: 767px) {
+      height: 65vh !important;
+    }
+  }
+
   .box {
     position: relative;
     display: flex;
@@ -42,6 +48,30 @@
     background-size: cover !important;
     background-position: center !important;
     margin-bottom: 0.5em;
+
+    @media (max-width: 767px) {
+
+      background: rgba(0,0,0,0.8);
+
+      .box-image {
+        position: relative;
+        display: block;
+        height: 40vh;
+        width: 100%;
+        z-index: 30;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+
+        + .box-inner {
+          margin: 0;
+
+          .overlay {
+            opacity: 1;
+          }
+        }
+      }
+    }
 
     .box-inner {
       width: 50%;
@@ -55,7 +85,8 @@
       padding: 5vh 10%;
 
       @media (max-width: 767px) {
-        width: 100%;
+        width: 95vw;
+        margin: 2.5vw;
         padding: 5vh 2.5vw;
       }
     }
@@ -68,20 +99,48 @@
       padding-bottom: 3em;
 
       .page-link {
+        position: relative;
         display: flex;
         height: 25vw;
         width: 25vw;
         align-items: center;
         justify-content: center;
-        background-size: cover;
+
+        overflow: hidden;
+
+        .page-thumbnail {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background-size: cover;
+          background-position: center center;
+          transition: all 250ms ease-in;
+        }
 
         * {
           cursor: pointer;
         }
 
         h4 {
+          position: relative;
           color: #fff;
           margin: 0;
+        }
+
+        &:hover {
+         > div {
+           transform: scale(1.125)
+         }
+        }
+      }
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+
+        .page-link {
+          width: 75vw;
+          height: 75vw;
+          margin: 1em auto;
         }
       }
     }
@@ -100,6 +159,19 @@
 
       span.label {
         display: none;
+      }
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+
+        label {
+          padding-top: 0;
+          padding-bottom: 0;
+
+          input {
+            margin: 0 !important;
+          }
+        }
       }
     }
 
@@ -120,9 +192,17 @@
       font-size: 1.5em;
     }
 
+    @media (max-width: 767px) {
+      flex-direction: column-reverse !important;
+    }
+
     &:nth-of-type(even) {
       flex-direction: row-reverse;
+
     }
+
+
+
 
     .box-inner {
       position: relative;

@@ -43,11 +43,12 @@ get_header();
                 setup_postdata( $post);
 
                 ?>
-                <a class="page-link" href="<?php the_permalink(); ?>" style="background-image: url('<?php echo
-                $page_image; ?>')">
-                  <div>
-                    <h4><?php the_title(); ?></h4>
+                <a class="page-link" href="<?php the_permalink(); ?>">
+                  <div class="page-thumbnail" style="background-image: url('<?php echo
+                  $page_image; ?>')">
+
                   </div>
+                  <h4><?php the_title(); ?></h4>
                 </a>
                 <?php
                 wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
@@ -60,7 +61,7 @@ get_header();
       endif;
 
       if ($box_type == 'two_col'):
-        echo '<div class="box-image"></div>';
+        echo '<div class="box-image" style="background-image: url(' . $image . ')"></div>';
         echo '<div class="box-inner"><div>';
         echo '<h2>' . $headline . '</h2>';
         echo $copy;
