@@ -1,0 +1,181 @@
+
+.home .content {
+  margin: 0;
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5em;
+    min-height: 66vh;
+
+    h2,
+    h3 {
+      font-family: 'journal';
+      color: #fff;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 5em;
+      line-height: 1em;
+    }
+
+  }
+}
+
+.box-type-image {
+  background: #eee;
+  height: calc(100vh - 90px);
+}
+
+
+#content-boxes {
+  margin-bottom: 0;
+  color: #fff;
+
+  .box {
+    position: relative;
+    display: flex;
+    min-height: 50vh;
+    width: 100vw;
+    background-size: cover !important;
+    background-position: center !important;
+    margin-bottom: 0.5em;
+
+    .box-inner {
+      width: 50%;
+    }
+
+    .box-wide {
+      width: 80%;
+      align-self: center;
+      justify-self: center;
+      text-align: center;
+      padding: 5vh 10%;
+
+      @media (max-width: 767px) {
+        width: 100%;
+        padding: 5vh 2.5vw;
+      }
+    }
+
+    .page-links {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content: center;
+      padding-bottom: 3em;
+
+      .page-link {
+        display: flex;
+        height: 25vw;
+        width: 25vw;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+
+        * {
+          cursor: pointer;
+        }
+
+        h4 {
+          color: #fff;
+          margin: 0;
+        }
+      }
+    }
+    
+    form .form-row {
+      display: flex;
+      width: 100%;
+
+      p, label {
+        flex: 1;
+      }
+
+      label {
+        padding: 1em;
+      }
+
+      span.label {
+        display: none;
+      }
+    }
+
+    input {
+      font-family: 'Nunito';
+      color: #fff;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      padding: 8px;
+      font-size: 16px;
+      background: #041C33;
+    }
+
+    input[type="submit"] {
+      background-color: $orange;
+      font-size: 1.5em;
+    }
+
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
+
+    .box-inner {
+      position: relative;
+      width: 50%;
+      min-width: 300px;
+      margin: 5em 0;
+      padding: 2em 5vh;
+      color: #fff;
+      z-index: 10;
+      background: transparent;
+
+
+      h2 {
+        margin-bottom: 0;
+      }
+
+      p, a {
+        font-family: 'Nunito';
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.15em;
+      }
+
+      p + h3 {
+        font-size: 4em;
+        line-height: 0.75em;
+        margin: 0.5em 0;
+        color: $orange;
+      }
+
+      .overlay {
+        background-color: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.8;
+        filter: contrast(3.5) saturate(2.0) grayscale(0.4);
+        z-index: -1;
+      }
+    }
+  }
+}
+
+#video {
+  background: #D1D3D4;
+}
+
+#about {
+  background: #F1931C;
+}
+
+#signup {
+  background: #262869;
+}

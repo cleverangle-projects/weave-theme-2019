@@ -1,0 +1,70 @@
+header#header {
+  #top-links,
+  #search {
+    display: none;
+  }
+
+  display: flex;
+  background-color: #C7C8CA;
+
+  h1 {
+    margin: 0;
+    text-indent: -99999px;
+  }
+
+  #branding {
+    width: 300px;
+    h1 {
+      position: absolute;
+    }
+    #logo {
+      img {
+        height: 90px;
+        margin: 0 5vw;
+
+        @media (max-width: 767px) {
+          width: 140px;
+          height: auto;
+          margin: 2.5vw;
+        }
+      }
+    }
+  }
+
+  nav#menu {
+    flex: 1;
+    justify-content: flex-end;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+    
+    ul {
+      list-style-type: none;
+      display: flex;
+      height: 90px;
+      margin: 0;
+      justify-content: flex-end;
+
+      li {
+        //flex: 1;
+        height: 100%;
+        max-width: 160px;
+        margin: 0 !important;
+        padding: 0 2.5vw 0 0;
+
+        a {
+          display: flex;
+          height: 100%;
+          line-height: 1em;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          font-weight: bold;
+          color: $purple;
+        }
+      }
+    }
+  }
+}
