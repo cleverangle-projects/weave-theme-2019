@@ -23,7 +23,7 @@
       }
 
       h2 {
-        font-family: marydale, sans-serif !important;
+        //font-family: marydale, sans-serif !important;
         font-weight: 700;
         font-size: 2.5em;
         font-style: normal;
@@ -72,9 +72,9 @@
         text-align: left;
 
         .highlighted {
-          font-family: marydale, sans-serif;
-          font-weight: 700;
-          font-style: normal;
+          //font-family: marydale, sans-serif;
+          //font-weight: 700;
+          //font-style: normal;
         }
       }
 
@@ -114,9 +114,9 @@
   #meet-the-weavers {
     h2 {
       .highlighted {
-        font-family: marydale, sans-serif;
-        font-weight: 500;
-        font-size: 1.5em;
+        //font-family: marydale, sans-serif;
+        //font-weight: 500;
+        //font-size: 1.5em;
       }
     }
     .weave-button {
@@ -138,9 +138,9 @@
 
       .highlighted {
         display: inilne-block;
-        font-family: marydale, sans-serif;
-        font-weight: 500;
-        font-size: 1.5em;
+        //font-family: marydale, sans-serif;
+        //font-weight: 500;
+        //font-size: 1.5em;
 
         &:before,
         &:after {
@@ -150,7 +150,7 @@
         }
 
         &:before {
-          padding: 4px;
+          padding: 2px;
         }
       }
     }
