@@ -1,6 +1,6 @@
 footer#footer {
   min-height: 50vh;
-  background: #000;
+  background: $dkgray;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,4 +20,33 @@ footer#footer {
   p {
     color: #fff;
   }
+}
+
+.contact-links {
+  a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 0 8px;
+
+    background-size: cover !important;
+    background-position: center center;
+
+    &.facebook-btn {
+      background: url(./img/facebook.png);
+    }
+    &.twitter-btn {
+      background: url(./img/twitter.png);
+    }
+    &.email-btn {
+      background: url(./img/email.png);
+    }
+  }
+}
+
+#rights {
+  padding: 16px 8px;
+  color: #fff;
+  background: #000;
+  text-align: center;
 }

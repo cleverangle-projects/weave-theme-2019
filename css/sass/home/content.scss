@@ -34,7 +34,7 @@
     width: 100vw;
     background-size: cover !important;
     background-position: center !important;
-    margin-bottom: 0.5em;
+    //margin-bottom: 0.5em;
 
     @media (max-width: 767px) {
 
@@ -83,21 +83,27 @@
 
     .page-links {
       display: flex;
+      flex-wrap: wrap;
       width: 100%;
       flex-direction: row;
       justify-content: center;
       padding-bottom: 3em;
 
-      .page-link {
+      > .page-link {
         position: relative;
         display: flex;
         height: 25vw;
         width: 25vw;
+        max-width: 240px;
+        max-height: 240px;
         margin: 12px;
         align-items: center;
         justify-content: center;
-
         overflow: hidden;
+
+        &:nth-child(3n) {
+          flex-basis: 100%;
+        }
 
         .page-thumbnail {
           position: absolute;
@@ -114,14 +120,50 @@
 
         h4 {
           position: relative;
-          //color: #fff;
+          color: #fff;
           margin: 0;
+          opacity: 0;
+          transition: opacity 250ms;
+          z-index: 4;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: none;
+          transition: background 500ms;
+          z-index: 2;
         }
 
         &:hover {
-         > div {
+          h4 {
+            opacity: 1 !important;
+          }
+          > div {
            transform: scale(1.125)
-         }
+          }
+
+          &:after {
+            background: rgba(22, 120, 60, 0.4);
+          }
+        }
+
+        @media (max-width: 767px) {
+
+          max-width: 300px;
+          max-height: 300px;
+
+          h4 {
+            opacity: 1 !important;
+          }
+          &:after {
+            background: rgba(22, 120, 60, 0.4);
+          }
         }
       }
 
@@ -129,6 +171,7 @@
         flex-direction: column;
 
         .page-link {
+          flex-basis: auto !important;
           width: 75vw;
           height: 75vw;
           margin: 1em auto;

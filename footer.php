@@ -71,13 +71,18 @@ if ( get_theme_mod( 'brand_logo_reverse' ) ) :
 $brand_logo_rev = get_theme_mod( 'brand_logo_reverse');
 endif;
 ?>
+  <div class="contact-links">
+    <a class="facebook-btn" href="" alt="Facebook"></a>
+    <a class="twitter-btn" href="" alt="Twitter"></a>
+    <a class="email-btn" href="" alt="Email"></a>
+  </div>
   <div>
     <img id="logo-rev" src="<?php echo $brand_logo_rev; ?>" alt="">
   </div>
-  <p>Copyright © Aspen Institute</p>
-
 </footer>
-
+<div id="rights">
+  <p>Copyright © 2019. Weave, The Social Project. All rights reserved.</p>
+</div>
 </div><!-- /.page_wrap -->
 
 </div><!-- /.body_wrap -->
