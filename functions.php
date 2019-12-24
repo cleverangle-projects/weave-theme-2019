@@ -42,3 +42,37 @@ function weave_customizer_settings($wp_customize) {
       )
   );
 }
+
+function weave_button_shortcode( $atts, $content = null ) {
+  // Extract shortcode attributes
+  extract( shortcode_atts( array(
+      'url'    => '',
+      'title'  => '',
+      'target' => '',
+      'text'   => '',
+      'color'  => 'green',
+  ), $atts ) );
+  // Use text value for items without content
+  $content = $text ? $text : $content;
+  // Return button with link
+  if ( $url ) {
+    $link_attr = array(
+        'href'   => esc_url( $url ),
+        'title'  => esc_attr( $title ),
+        'target' => ( 'blank' == $target ) ? '_blank' : '',
+        'class'  => 'weave-button color-' . esc_attr( $color ),
+    );
+    $link_attrs_str = '';
+    foreach ( $link_attr as $key => $val ) {
+      if ( $val ) {
+        $link_attrs_str .= ' ' . $key . '="' . $val . '"';
+      }
+    }
+    return '<a' . $link_attrs_str . '><span>' . do_shortcode( $content ) . '</span></a>';
+  }
+  // No link defined so return button as a span
+  else {
+    return '<span class="weave-button"><span>' . do_shortcode( $content ) . '</span></span>';
+  }
+}
+add_shortcode( 'button', 'weave_button_shortcode' );

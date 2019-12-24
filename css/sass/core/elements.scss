@@ -1,6 +1,32 @@
 $purple: #262869;
 $red: #971212;
 $orange: #F1931C;
+$green: #16783C;
+
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,600,600i,700&display=swap');
+
+@import url("https://use.typekit.net/eqx6veq.css");
+
+@font-face {
+  font-family: 'AvenirNext-Bold';
+  src: url('./fonts/avenirnext-bold.eot');
+  src: url('./fonts/avenirnext-bold.eot') format('embedded-opentype'),
+url('./fonts/avenirnext-bold.woff2') format('woff2'),
+  url('./fonts/avenirnext-bold.woff') format('woff'),
+url('./fonts/avenirnext-bold.ttf') format('truetype'),
+  url('./fonts/avenirnext-bold.svg#AvenirNextBold') format('svg');
+}
+
+//@font-face {
+//  font-family: 'journal';
+//  src: url('./fonts/journal-webfont.woff2') format('woff2'),
+//  url('./fonts/journal-webfont.woff') format('woff'),
+//  url('./fonts/journal-webfont.ttf') format('truetype');
+//  font-weight: bold;
+//  font-style: normal;
+//}
+
 
 .trx_addons_scroll_to_top {
   background-color: $purple !important;
@@ -11,13 +37,19 @@ html, body {
   font-size: 16px;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,600,600i,700&display=swap');
+h1,
+h2 {
+  font-weight: 900;
+  font-family: AvenirNext-Bold !important;
+}
 
-@font-face {
-  font-family: 'journal';
-  src: url('./fonts/journal-webfont.woff2') format('woff2'),
-  url('./fonts/journal-webfont.woff') format('woff'),
-  url('./fonts/journal-webfont.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
+p {
+  line-height: 1.125em !important;
+}
+
+.weave-button {
+  background: $purple;
+  color: #fff !important;
+  padding: 12px 24px;
+  font-weight: 800;
 }

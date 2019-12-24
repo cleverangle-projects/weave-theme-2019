@@ -15,21 +15,54 @@ get_header();
   if( have_rows('field_5df68d6f05f9c') ):
     while ( have_rows('field_5df68d6f05f9c') ) : the_row();
       $box_type = get_sub_field('field_5df6bc90f4bea');
+      $bg_type = get_sub_field('field_5e019542de230');
       $image = get_sub_field('field_5df6b36c51d17')['url'];
       $headline = get_sub_field('field_5df68f162f3b9');
       $show_headline = get_sub_field('field_5df6c11f2c756');
-      $overlay_color = get_sub_field('field_5df6b78dbcd98');
+      $bg_color = get_sub_field('field_5df6b78dbcd98');
       $copy = get_sub_field('field_5df68f2456665');
+      $slug = get_sub_field('field_5e011e77e1979');
 
-      echo '<div class="box box-type-' . $box_type . ' box-' . get_row_index() . '" style="background-image: url(' .
-          $image
-          .')">';
+//      $btn = get_field('field_5e0197e638f1d');
+//      if( $btn ):
+//        $btn_url = $btn['url'];
+//        $btn_title = $btn['title'];
+//        $btn_target = $btn['target'] ? $btn['target'] : '_self';
+//      endif;
+
+      $bg = '';
+
+      $words = array('heal', 'weavers');
+      if (have_rows('field_5e01965342ca1')) :
+        while (have_rows('field_5e01965342ca1')) : the_row();
+          $word = get_sub_field('field_5e01969442ca2');
+          $matchWords[] = "/$word/i";
+        endwhile;
+        $headline = preg_replace($matchWords, '<span class="highlighted">$0</span>', $headline);
+        $copy = preg_replace($matchWords, '<span class="highlighted">$0</span>', $copy);
+      endif;
+
+      if ($bg_type == 'image') {
+        $bg = 'background-image: url(' . $image .')';
+      }
+
+      if ($bg_type == 'color') {
+        $bg = 'background-color:' . $bg_color;
+      }
+
+      if ($bg_type == 'video') {
+
+      }
+
+      echo '<div ' . ( $slug ? 'id="' . $slug . '"' : '') . ' class="box box-type-' . $box_type . ' box-' .
+              get_row_index() . '" style="' . $bg . '">';
 
       if ($box_type == 'one_col' || $box_type == 'about' ):
         echo '<div class="box-wide">';
         if ($show_headline) :
           echo '<h2>' . $headline . '</h2>';
         endif;
+
         echo $copy;
         if ($box_type == 'about') :
           if( have_rows('field_5df6d0fddcce4') ):
@@ -55,6 +88,8 @@ get_header();
               endif;
             endwhile;
             echo '</div>';
+            echo '<a class="weave-button" href="' . get_permalink( get_option( 'page_for_posts' )
+                ) . '">Read More stories</a>';
           endif;
         endif;
         echo '</div>';
@@ -65,9 +100,14 @@ get_header();
         echo '<div class="box-inner"><div>';
         echo '<h2>' . $headline . '</h2>';
         echo $copy;
-        echo '<div class="overlay" style="background-color: ' . $overlay_color . '"></div>';
+        echo '<div class="overlay" style="background-color: ' . $bg_color . '"></div>';
         echo '</div></div>';
       endif;
+
+//      if( $btn ):
+//        echo '<a class="button" href="' . esc_url( $btn_url ) . '" target="' . esc_attr(
+//            $btn_target ) . '">' . esc_html( $btn_title ) . '</a>';
+//      endif;
 
       echo '</div>';
     endwhile;
