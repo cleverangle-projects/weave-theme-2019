@@ -100,7 +100,8 @@
   #we-can-heal {
     .box-wide {
       column-count: 2;
-      margin: 16vh 0;
+      column-gap: 40px;
+      margin: 8vh 0 4vh;
 
       h2 {
         margin-top: 0;
@@ -191,7 +192,7 @@
 
   #be-a-weaver {
     .box-wide {
-      margin-bottom: 2.5vh;
+      margin-bottom: 4vh;
       text-align: left;
       z-index: 2;
       color: #fff;
