@@ -120,7 +120,37 @@
       }
     }
     .weave-button {
-      background: green;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 80px;
+      height: 80px;
+      margin: 0 auto;
+      padding: 0;
+      line-height: 1em;
+      border-radius: 50%;
+      background: $green;
+
+      span {
+        flex-direction: column;
+
+        &:first-of-type {
+          margin-top: 12px;
+          margin-bottom: 8px;
+          font-family: 'AvenirNext-Bold';
+          font-size: 12px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+      }
+
+      svg {
+        overflow: hidden;
+        height: 16px;
+        width: 16px;
+        fill: #fff;
+      }
     }
   }
 

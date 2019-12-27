@@ -81,7 +81,8 @@ endif;
   </div>
 </footer>
 <div id="rights">
-  <p>Copyright © 2019. Weave, The Social Project. All rights reserved.</p>
+  <p>Copyright © <?php echo date("Y"); ?>. Aspen Institute’s Weave: The Social Fabric Project. All rights
+    reserved.</p>
 </div>
 </div><!-- /.page_wrap -->
 
