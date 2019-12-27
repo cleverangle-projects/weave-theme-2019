@@ -32,7 +32,6 @@ get_header();
 
       $bg = '';
 
-      $words = array('heal', 'weavers');
       if (have_rows('field_5e01965342ca1')) :
         while (have_rows('field_5e01965342ca1')) : the_row();
           $word = get_sub_field('field_5e01969442ca2');
@@ -56,6 +55,16 @@ get_header();
 
       echo '<div ' . ( $slug ? 'id="' . $slug . '"' : '') . ' class="box box-type-' . $box_type . ' box-' .
               get_row_index() . '" style="' . $bg . '">';
+
+      if (get_row_index() == 1):
+        ?>
+        <div class="background-video-container">
+          <video autoplay loop id="video-background" muted playsinline controls="false">
+            <source src="https://hattww.s3-us-west-2.amazonaws.com/videos/Weavers+Loop.mp4">
+          </video>
+        </div>
+        <?php
+      endif;
 
       if ($box_type == 'one_col' || $box_type == 'about' ):
         echo '<div class="box-wide">';
