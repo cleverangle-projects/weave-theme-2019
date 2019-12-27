@@ -11,6 +11,7 @@
     var mejs_players = new Array();
     var player;
     $('video').each(function() {
+      $(this).controls = false;
       player = $(this)[0].player;
       player.remove();
     });
