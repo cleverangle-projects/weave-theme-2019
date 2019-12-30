@@ -66,13 +66,18 @@ get_header();
         <?php
       endif;
 
-      if ($box_type == 'one_col' || $box_type == 'about' ):
+      if ($box_type == 'one_col' || $box_type == 'about' || $box_type = 'sign_up' ):
         echo '<div class="box-wide">';
         if ($show_headline) :
           echo '<h2>' . $headline . '</h2>';
         endif;
 
         echo $copy;
+
+        if ($box_type == 'sign_up'):
+          echo '<iframe src="http://localhost:8116/sign-up" width="100%" height="100vh" frameborder="0" scrolling="no" > </iframe>';
+        endif;
+
         if ($box_type == 'about') :
           if( have_rows('field_5df6d0fddcce4') ):
             echo '<div class="page-links">';

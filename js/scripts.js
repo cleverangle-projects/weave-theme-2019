@@ -10,9 +10,12 @@
   $(document).ready(function() {
     var mejs_players = new Array();
     var player;
-    $('video').each(function() {
+
+    $('video#video-background').each(function() {
       $(this).controls = false;
       player = $(this)[0].player;
+      console.log($(this));
+
       player.remove();
     });
   });
