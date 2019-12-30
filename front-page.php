@@ -75,7 +75,7 @@ get_header();
         echo $copy;
 
         if ($box_type == 'sign_up'):
-          echo '<iframe src="http://localhost:8116/sign-up" width="100%" height="100vh" frameborder="0" scrolling="no" > </iframe>';
+          echo '<iframe id="front-signup" src="/sign-up" width="100%" height="100vh" frameborder="0" scrolling="no" > </iframe>';
         endif;
 
         if ($box_type == 'about') :
