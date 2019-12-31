@@ -48,7 +48,7 @@
       }, 500);
     }
   }
-  req.timeout = 15000; // Set timeout to 4 seconds (4000 milliseconds)
+  req.timeout = 25000; // Set timeout to 4 seconds (4000 milliseconds)
   req.ontimeout = function () {
     // alert("Timed out!!!");
     $('.background-video-container').hide();
