@@ -119,7 +119,6 @@
           }
 
         </style></div>
-      <a href="https://aspeninstitute.org">Aspen</a>
       <h3 class="wFormTitle" id="4693583-T">Stay Connected: Join Our Mailing List</h3>
       <form method="post" action="https://www.tfaforms.com/responses/processor" class="hintsBelow labelsLeftAligned" id="4693583" role="form">
         <div class="oneField field-container-D    " id="tfa_1-D">
