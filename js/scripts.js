@@ -31,6 +31,7 @@
 
   req.onload = function() {
     $('body.home').addClass('has-loaded');
+    $('#we-are-weavers').addClass('has-video');
 
     // Onload is triggered even on 404
     // so we need to check the status code
@@ -48,7 +49,7 @@
       }, 500);
     }
   }
-  req.timeout = 25000; // Set timeout to 4 seconds (4000 milliseconds)
+  req.timeout = 20000; // Set timeout to 4 seconds (4000 milliseconds)
   req.ontimeout = function () {
     // alert("Timed out!!!");
     $('.background-video-container').hide();
