@@ -32,11 +32,11 @@ while ( have_posts() ) {
       the_post_navigation(
           array(
               'next_text' => '<span class="nav-arrow"></span>'
-                  . '<span class="screen-reader-text">' . esc_html__( 'Next Weaver', 'rhodos' ) .
+                  . '<span class="screen-reader-text">' . esc_html__( 'Next', 'rhodos' ) .
                   '</span> '
                   . '<h6 class="post-title">%title</h6>',
               'prev_text' => '<span class="nav-arrow"></span>'
-                  . '<span class="screen-reader-text">' . esc_html__( 'Prev Weaver', 'rhodos' ) .
+                  . '<span class="screen-reader-text">' . esc_html__( 'Prev', 'rhodos' ) .
                   '</span> '
                   . '<h6 class="post-title">%title</h6>',
           )
