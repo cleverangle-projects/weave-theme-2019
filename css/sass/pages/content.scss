@@ -111,6 +111,13 @@
     //color: #fff;
   }
 
+  span.your-message {
+    width: 100%;
+    text-area {
+      width: 100%;
+    }
+  }
+
   input[type="text"],
   input[type="email"] {
     padding: 8px;
