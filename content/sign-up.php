@@ -178,12 +178,19 @@
 
 
   </p>
+
 </div>
 <script>
   var els = document.getElementsByTagName('input');
   for (var i=0; i < els.length; i++) {
     var place = els[i].getAttribute('title')
     els[i].setAttribute('placeholder', place);
+  }
+
+  window.onbeforeunload = function(event) {
+
+    window.parent.alert('unloading');
+    event.preventDefault();
   }
 </script>
 </body>

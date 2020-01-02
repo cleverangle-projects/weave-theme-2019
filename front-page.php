@@ -60,7 +60,7 @@ get_header();
         ?>
         <div class="background-video-container">
           <video autoplay loop id="video-background" muted playsinline controls="false">
-            <source src="https://hattww.s3-us-west-2.amazonaws.com/videos/Weavers+Loop.mp4">
+<!--            <source src="https://hattww.s3-us-west-2.amazonaws.com/videos/Weavers+Loop.mp4">-->
           </video>
         </div>
         <?php
@@ -75,7 +75,7 @@ get_header();
         echo $copy;
 
         if ($box_type == 'sign_up'):
-          echo '<iframe id="front-signup" src="/sign-up" width="100%" height="100vh" frameborder="0" scrolling="no" > </iframe>';
+          echo '<iframe id="front-signup" name="example" onload="resizeIframe(this)" src="/sign-up" width="100%" height="100vh" frameborder="0" scrolling="no" > </iframe>';
         endif;
 
         if ($box_type == 'about') :

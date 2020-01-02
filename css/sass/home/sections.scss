@@ -12,6 +12,10 @@
     color: #fff;
     overflow: hidden;
 
+    &.has-video {
+      background: none !important;
+    }
+
     .background-video-container {
       position: absolute;
       min-height: 100vh;
