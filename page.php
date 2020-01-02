@@ -34,8 +34,9 @@ while ( have_posts() ) {
 if (is_page( 'Contact Us' )) :
 ?>
 
-
-Contact Form
+<div id="contact-form">
+<?php echo do_shortcode('[contact-form-7 id="2545" title="Contact form 1"]') ?>
+</div>
 
 <?php
 endif;

@@ -181,72 +181,6 @@
       }
     }
     
-    form .form-row {
-      display: flex;
-      width: 100%;
-
-      p, label {
-        flex: 1;
-
-      }
-
-      label {
-        padding: 0 0.5em;
-      }
-
-      span.label {
-        display: none;
-      }
-
-      @media (max-width: 767px) {
-        margin-top: 3em;
-        flex-direction: column;
-
-        label {
-          padding: 0;
-          line-height: 0;
-
-          input {
-            margin: 0 !important;
-          }
-        }
-      }
-    }
-
-    input {
-      font-family: 'Nunito';
-      //color: #fff;
-    }
-
-    input[type="text"],
-    input[type="email"] {
-      padding: 8px;
-      font-size: 16px;
-      background: #041C33;
-    }
-
-    input[type="submit"] {
-      margin-top: 0;
-      background-color: $orange;
-      font-size: 18px;
-      font-weight: 700;
-
-      @media (max-width: 767px) {
-        margin-top: 1.25em;
-      }
-    }
-
-    @media (max-width: 767px) {
-      flex-direction: column-reverse !important;
-    }
-
-    &:nth-of-type(even) {
-      flex-direction: row-reverse;
-
-    }
-
-
-
 
     .box-inner {
       position: relative;
@@ -303,3 +237,4 @@
 #signup {
   background: #262869;
 }
+
