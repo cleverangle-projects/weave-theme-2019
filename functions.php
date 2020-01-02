@@ -81,3 +81,20 @@ function weave_button_shortcode( $atts, $content = null ) {
 add_shortcode( 'button', 'weave_button_shortcode' );
 
 
+function weaver_post_type() {
+  register_post_type( 'weaver',
+// CPT Options
+      array(
+          'labels' => array(
+              'name' => __( 'Weavers' ),
+              'singular_name' => __( 'Weaver' )
+          ),
+          'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'page-attributes'),
+          'public' => true,
+          'has_archive' => false,
+          'rewrite' => array('slug' => 'weavers'),
+      )
+  );
+}
+add_action( 'init', 'weaver_post_type' );
+
