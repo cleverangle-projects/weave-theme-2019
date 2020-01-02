@@ -102,7 +102,7 @@ get_header();
               endif;
             endwhile;
             echo '</div>';
-            echo '<a class="weave-button" href="#"><span>Load More</span>';
+            echo '<a class="weave-button" href="#"><span>More Stories</span>';
             echo '<span>';
             echo '<svg id="arrow-down" viewBox="0 0 18 11"><polygon points="16,0 9,7 2,0 0,2 9,11 18,2 "></polygon></svg></a>';
             echo '</span>';

@@ -1,5 +1,5 @@
 footer#footer {
-  min-height: 50vh;
+  min-height: 33vh;
   background: $dkgray;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,6 @@ footer#footer {
     width: 80%;
     height: auto;
     max-width: 330px;
-    margin-bottom: 2em;
   }
 
   p {
@@ -32,6 +31,8 @@ footer#footer {
     background-size: cover !important;
     background-position: center center;
 
+    transition: 250ms all;
+
     &.facebook-btn {
       background: url(./img/facebook.png);
     }
@@ -40,6 +41,10 @@ footer#footer {
     }
     &.email-btn {
       background: url(./img/email.png);
+    }
+
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }

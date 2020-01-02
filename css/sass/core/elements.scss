@@ -82,4 +82,22 @@ p {
   color: #fff !important;
   padding: 12px 24px;
   font-weight: 800;
+
+}
+
+
+input[type="submit"],
+#submit_button,
+.weave-button {
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 250ms all;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.trx_addons_scroll_to_top {
+  
 }
