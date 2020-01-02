@@ -1,4 +1,5 @@
 (function($) {
+
   console.log(window.location.href);
   $('#hamburger-btn').on('click', function() {
     $(this).toggleClass('open');
@@ -9,6 +10,7 @@
   });
 
   $(document).ready(function() {
+    new WOW().init();
     var mejs_players = new Array();
     var player;
 
@@ -112,5 +114,7 @@ window.addEventListener("message", function(event) {
   // can message back using event.source.postMessage(...)
 });
 // req.open('GET', 'https://hattww.s3-us-west-2.amazonaws.com/videos/Weavers+Loop.mp4', true);
+
+
 
 

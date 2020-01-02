@@ -60,7 +60,7 @@ get_header();
         ?>
         <div class="background-video-container">
           <video autoplay loop id="video-background" muted playsinline controls="false">
-<!--            <source src="https://hattww.s3-us-west-2.amazonaws.com/videos/Weavers+Loop.mp4">-->
+
           </video>
         </div>
         <?php
@@ -69,10 +69,10 @@ get_header();
       if ($box_type == 'one_col' || $box_type == 'about' || $box_type = 'sign_up' ):
         echo '<div class="box-wide">';
         if ($show_headline) :
-          echo '<h2>' . $headline . '</h2>';
+          echo '<h2 class="wow fadeIn">' . $headline . '</h2>';
         endif;
 
-        echo $copy;
+        echo '<div class="wow fadeIn">' . $copy . '</div>';
 
         if ($box_type == 'sign_up'):
           echo '<iframe id="front-signup" name="example" onload="resizeIframe(this)" src="/sign-up" width="100%" height="100vh" frameborder="0" scrolling="no" > </iframe>';
@@ -102,7 +102,7 @@ get_header();
               endif;
             endwhile;
             echo '</div>';
-            echo '<a class="weave-button" href="#"><span>Load More</span>';
+            echo '<a class="weave-button" href="#"><span>More Stories</span>';
             echo '<span>';
             echo '<svg id="arrow-down" viewBox="0 0 18 11"><polygon points="16,0 9,7 2,0 0,2 9,11 18,2 "></polygon></svg></a>';
             echo '</span>';
@@ -114,7 +114,7 @@ get_header();
 
       if ($box_type == 'two_col'):
         echo '<div class="box-image" style="background-image: url(' . $image . ')"></div>';
-        echo '<div class="box-inner"><div>';
+        echo '<div class="box-inner wow fadeInUp"><div>';
         echo '<h2>' . $headline . '</h2>';
         echo $copy;
         echo '<div class="overlay" style="background-color: ' . $bg_color . '"></div>';
