@@ -58,12 +58,22 @@
   }
 
   article {
-
     min-height: 50vh;
-
     margin-top: -10vh;
-
   }
+
+  #contact-form {
+    background: $purple;
+    > div {
+      width: 80%;
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 5%;
+    }
+  }
+
+
+
   form .form-row {
     display: flex;
     width: 100%;
