@@ -66,7 +66,7 @@ get_header();
         <?php
       endif;
 
-      if ($box_type == 'about' || $box_type = 'sign_up' ):
+      if ($box_type == 'one_col' || $box_type == 'about' || $box_type = 'sign_up' ):
         echo '<div class="box-wide">';
         if ($show_headline) :
           echo '<h2 class="wow fadeIn">' . $headline . '</h2>';
