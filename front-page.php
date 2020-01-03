@@ -58,14 +58,14 @@ get_header();
               get_row_index() . '" style="' . $bg . '">';
 
       if (get_row_index() == 1):
-        echo '<div class="box-wide" data-type="'. $box_type . '">';
-        ?>
-          <div class="background-video-container">
-            <video autoplay loop id="video-background" muted playsinline controls="false">
+      ?>
+        <div class="background-video-container">
+          <video autoplay loop id="video-background" muted playsinline controls="false">
 
-            </video>
-          </div>
-        <?php
+          </video>
+        </div>
+      <?php
+        echo '<div class="box-wide" data-type="'. $box_type . '">';
         echo '</div>';
       else:
 
