@@ -114,7 +114,7 @@ get_header();
         endif;
         echo '</div>';
 
-      echo '</div>';
+      echo '</div></div>';
       endif;
     endwhile;
   else :
