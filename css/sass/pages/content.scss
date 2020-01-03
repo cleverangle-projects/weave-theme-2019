@@ -153,6 +153,19 @@
 
   #tlaform {
     background: $purple;
+
+    p {
+      width: 90%;
+      max-width: 1024px;
+      margin-top: 10vh;
+      color: #fff;
+      font-size: 1.75em;
+      text-align: center;
+
+      .highlighted {
+        font-weight: 700;
+      }
+    }
   }
 
 }
