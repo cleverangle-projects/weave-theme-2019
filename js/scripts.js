@@ -39,6 +39,9 @@
     //   console.log(players[0]);
     // }
 
+    let win = window.frames.salesforce;
+    console.log('frame:' + win.name );
+
   });
 
 
@@ -70,68 +73,44 @@
       }, 500);
     }
   }
-  req.timeout = 20000; // Set timeout to 4 seconds (4000 milliseconds)
+  req.timeout = 20000;
   req.ontimeout = function () {
-    // alert("Timed out!!!");
     $('.background-video-container').hide();
     $('body').removeClass('is-loading');
   };
   req.onerror = function() {
-
     // Error
   }
 
   req.send();
 
+
+
 })( jQuery );
 
-// function iframeURLChange(iframe, callback) {
-//   var unloadHandler = function () {
-//     // Timeout needed because the URL changes immediately after
-//     // the `unload` event is dispatched.
-//     setTimeout(function () {
-//       callback(iframe.contentWindow.location.href);
-//       console.log(iframe.contentWindow.location.href);
-//     }, 0);
-//   };
-//
-//   function attachUnload() {
-//     // Remove the unloadHandler in case it was already attached.
-//     // Otherwise, the change will be dispatched twice.
-//     iframe.contentWindow.removeEventListener("unload", unloadHandler);
-//     iframe.contentWindow.addEventListener("unload", unloadHandler);
-//   }
-//
-//   iframe.addEventListener("load", attachUnload);
-//   attachUnload();
-// }
-//
-// iframeURLChange(document.getElementById("front-signup"), function (newURL) {
-//   console.log("URL changed:", newURL);
-// });
 
-let win = window.frames.example;
 
-function resizeIframe(obj) {
-  // alert(obj.contentWindow.location.pathname);
+function reloadIframe(obj) {
+  let win = window.frames.salesforce;
+  console.log('frame:' + win.name );
+  win.onbeforeunload = function(event) {
+    let frame = document.getElementById("signup"),
+        frameHeight = frame.offsetHeight,
+        success = document.getElementById("successful-signup");
+    frame.style.visibility = "hidden";
+    frame.style.display = "none";
+
+    success.style.height = frameHeight + 'px';
+
+    setTimeout(function() {
+      success.style.opacity = 1;
+    }, 1250);
+  }
 }
 
 window.addEventListener("message", function(event) {
   console.log('logging iframe messages');
-
-  // if (event.origin + '/' !== window.location.href && event.origin !== 'https://player.vimeo.com') {
-  //   console.log(event.origin);
-  //   return;
-  // }
-
-  // console.log(document.getElementById("front-signup").contentDocument.referrer);
-
-
-  // alert( "received: " + event.data );
-
-  // can message back using event.source.postMessage(...)
 });
-// req.open('GET', 'https://hattww.s3-us-west-2.amazonaws.com/videos/Weavers+Loop.mp4', true);
 
 
 

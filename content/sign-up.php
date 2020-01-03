@@ -189,8 +189,7 @@
 
   window.onbeforeunload = function(event) {
 
-    window.parent.alert('unloading');
-    event.preventDefault();
+    console.log(window.parent);
   }
 </script>
 </body>
