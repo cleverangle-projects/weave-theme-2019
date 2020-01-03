@@ -64,7 +64,7 @@ get_header();
 
           </video>
         </div>
-      <?php
+        <?php
         echo '<div class="box-wide" data-type="'. $box_type . '">';
         if ($show_headline) :
           echo '<h2 class="wow fadeIn">' . $headline . '</h2>';
@@ -73,8 +73,6 @@ get_header();
         echo '</div>';
       else:
         echo '<div class="box-wide" data-type="'. $box_type . '">';
-          if ($box_type == 'col_one_box' || $box_type == 'about_box' || $box_type = 'sign_up_box' ||
-                  $box_type = 'col_two_box' ):
 
             if ($show_headline) :
               echo '<h2 class="wow fadeIn">' . $headline . '</h2>';
@@ -82,11 +80,11 @@ get_header();
 
             echo '<div class="wow fadeIn">' . $copy . '</div>';
 
-            if ($box_type == 'col_two_box'):
+            if ($box_type == 'col_two_box') :
               echo '<div class="wow fadeIn copy_two">' . $copy_2 . '</div>';
             endif;
 
-            if ($box_type == 'sign_up_box'):
+            if ($box_type == 'sign_up_box') :
               echo '<iframe id="front-signup" name="example" onload="resizeIframe(this)" src="/sign-up" width="100%" height="100vh" frameborder="0" scrolling="no" ></iframe>';
             endif;
 
@@ -122,7 +120,6 @@ get_header();
               endif;
             endif;
           echo '</div><!-- box-wide -->';
-        endif;
       endif;
         echo '</div>';
 
