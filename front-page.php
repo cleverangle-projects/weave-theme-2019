@@ -114,7 +114,6 @@ get_header();
         endif;
         echo '</div>';
       endif;
-      echo '</div>';
     endwhile;
   else :
     // no rows found
