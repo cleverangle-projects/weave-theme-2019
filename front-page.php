@@ -113,6 +113,8 @@ get_header();
           endif;
         endif;
         echo '</div>';
+
+      echo '</div>';
       endif;
     endwhile;
   else :
