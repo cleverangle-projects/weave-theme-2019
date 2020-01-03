@@ -66,11 +66,14 @@ get_header();
         <?php
       endif;
 
-      if ($box_type == 'one_col' || $box_type == 'about' || $box_type = 'sign_up' ):
-        echo '<div class="box-wide">';
-        if ($show_headline) :
-          echo '<h2 class="wow fadeIn">' . $headline . '</h2>';
-        endif;
+      echo '<div class="box-wide">';
+      if ($show_headline) :
+        echo '<h2 class="wow fadeIn">' . $headline . '</h2>';
+      endif;
+
+      if ($box_type == 'two_col'):
+
+      else:
 
         echo '<div class="wow fadeIn">' . $copy . '</div>';
 
@@ -111,34 +114,12 @@ get_header();
         endif;
         echo '</div>';
       endif;
-
-      if ($box_type == 'two_col'):
-        echo '<div class="box-image" style="background-image: url(' . $image . ')"></div>';
-        echo '<div class="box-inner wow fadeInUp"><div>';
-        echo '<h2>' . $headline . '</h2>';
-        echo $copy;
-        echo '<div class="overlay" style="background-color: ' . $bg_color . '"></div>';
-        echo '</div></div>';
-      endif;
-
-//      if( $btn ):
-//        echo '<a class="button" href="' . esc_url( $btn_url ) . '" target="' . esc_attr(
-//            $btn_target ) . '">' . esc_html( $btn_title ) . '</a>';
-//      endif;
-
       echo '</div>';
     endwhile;
   else :
-    // no rows found\
+    // no rows found
   endif;
   ?>
 </section>
-<!--<section id="video"></section>-->
-<!--<section id="about">-->
-<!--  <h2>Be a Weaver</h2>-->
-<!--</section>-->
-<!--<section id="signup">-->
-<!--  <h2>Be a Weaver</h2>-->
-<!--</section>-->
 <?php
 get_footer();
