@@ -112,6 +112,10 @@ get_header();
         endif;
         echo '</div>';
       endif;
+
+      if ($box_type == 'sign_up'):
+        echo '<iframe id="front-signup" name="example" onload="resizeIframe(this)" src="/sign-up" width="100%" height="100vh" frameborder="0" scrolling="no" ></iframe>';
+      endif;
       echo '</div>';
     endwhile;
   else :
