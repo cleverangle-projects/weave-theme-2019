@@ -73,7 +73,7 @@ get_header();
         echo '</div>';
       else:
         echo '<div class="box-wide" data-type="'. $box_type . '">';
-          if ($box_type == 'col_one_box' || $box_type == 'about' || $box_type = 'sign_up' ||
+          if ($box_type == 'col_one_box' || $box_type == 'about_box' || $box_type = 'sign_up_box' ||
                   $box_type = 'col_two_box' ):
 
             if ($show_headline) :
@@ -86,11 +86,11 @@ get_header();
               echo '<div class="wow fadeIn copy_two">' . $copy_2 . '</div>';
             endif;
 
-            if ($box_type == 'sign_up'):
+            if ($box_type == 'sign_up_box'):
               echo '<iframe id="front-signup" name="example" onload="resizeIframe(this)" src="/sign-up" width="100%" height="100vh" frameborder="0" scrolling="no" ></iframe>';
             endif;
-            
-            if ($box_type == 'about') :
+
+            if ($box_type == 'about_box') :
               if( have_rows('field_5df6d0fddcce4') ):
                 echo '<div class="page-links">';
                 while ( have_rows('field_5df6d0fddcce4') ) : the_row();
