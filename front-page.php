@@ -21,6 +21,7 @@ get_header();
       $show_headline = get_sub_field('field_5df6c11f2c756');
       $bg_color = get_sub_field('field_5df6b78dbcd98');
       $copy = get_sub_field('field_5df68f2456665');
+      $copy_2 = get_sub_field('copy_col_two');
       $slug = get_sub_field('field_5e011e77e1979');
 
 //      $btn = get_field('field_5e0197e638f1d');
@@ -75,10 +76,11 @@ get_header();
         echo '<div class="wow fadeIn">' . $copy . '</div>';
 
         if ($box_type == 'two_col'):
+          echo '<div class="wow fadeIn">' . $copy_2 . '</div>';
         endif;
 
         if ($box_type == 'sign_up'):
-          echo '<iframe id="front-signup" name="example" onload="resizeIframe(this)" src="/sign-up" width="100%" height="100vh" frameborder="0" scrolling="no" > </iframe>';
+          echo '<iframe id="front-signup" name="example" onload="resizeIframe(this)" src="/sign-up" width="100%" height="100vh" frameborder="0" scrolling="no" ></iframe>';
         endif;
 
         if ($box_type == 'about') :
