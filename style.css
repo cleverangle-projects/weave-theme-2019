@@ -6,7 +6,7 @@
  Author:       Hattaway Communications
  Author URI:   http://hattaway.com
  Template:     rhodos
- Version:      1.45
+ Version:      1.5
  Tags:         inheritable theme options
  Text Domain:  rhodos
 */
@@ -117,10 +117,6 @@ video {
     font-size: 18px;
     font-weight: 700;
     border-radius: 4px;
-}
-
-#meet-the-weavers a.weave-button {
-    display: none !important;
 }
 
 .scheme_default .trx_addons_scroll_to_top, .scheme_default .trx_addons_cv .trx_addons_scroll_to_top {

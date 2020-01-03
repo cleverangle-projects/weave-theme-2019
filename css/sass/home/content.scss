@@ -102,10 +102,18 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        opacity: 1;
+        transition: opacity 500ms;
+
+        &.incoming {
+          opacity: 0;
+        }
 
         &:nth-child(3n) {
           flex-basis: 100%;
         }
+
+        &:nth-of-type(1n+4) {display: none;}
 
         .page-thumbnail {
           position: absolute;

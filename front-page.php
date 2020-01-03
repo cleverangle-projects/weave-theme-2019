@@ -33,14 +33,14 @@ get_header();
 
       $bg = '';
 
-//      if (have_rows('field_5e01965342ca1')) :
-//        while (have_rows('field_5e01965342ca1')) : the_row();
-//          $word = get_sub_field('field_5e01969442ca2');
-//          $matchWords[] = "/$word/i";
-//        endwhile;
-//        $headline = preg_replace($matchWords, '<span class="highlighted">$0</span>', $headline);
-//        $copy = preg_replace($matchWords, '<span class="highlighted">$0</span>', $copy);
-//      endif;
+      if (have_rows('field_5e01965342ca1')) :
+        while (have_rows('field_5e01965342ca1')) : the_row();
+          $word = get_sub_field('field_5e01969442ca2');
+          $matchWords[] = "/$word/i";
+        endwhile;
+        $headline = preg_replace($matchWords, '<span class="highlighted">$0</span>', $headline);
+        $copy = preg_replace($matchWords, '<span class="highlighted">$0</span>', $copy);
+      endif;
 
       if ($bg_type == 'image') {
         $bg = 'background-image: url(' . $image .')';

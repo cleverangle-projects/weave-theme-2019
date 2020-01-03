@@ -18,10 +18,8 @@
           mobile:       false,       // trigger animations on mobile devices (default is true)
           live:         true,       // act on asynchronously loaded content (default is true)
           callback:     function(box) {
-            // the callback is fired every time an animation is started
-            // the argument that is passed in is the DOM node being animated
           },
-          scrollContainer: null // optional scroll container selector, otherwise use window
+          scrollContainer: null
         }
     );
     wow.init();
@@ -34,17 +32,10 @@
       player.remove();
     });
 
-    // var players = document.querySelectorAll("video[id^='video-background']");
-    // if (players.length > 0) {
-    //   console.log(players[0]);
-    // }
-
     let win = window.frames.salesforce;
     console.log('frame:' + win.name );
 
   });
-
-
 
   $('body.home').addClass('is-loading');
   var video = document.getElementById('video-background');
@@ -81,9 +72,24 @@
   req.onerror = function() {
     // Error
   }
-
   req.send();
 
+  // More Stories
+
+  let shownLinks = 4;
+
+  $('.box-type-about_box .weave-button').on('click', function(e) {
+    e.preventDefault();
+    var pageLink = $('.page-links > .page-link');
+    $('.page-links > .page-link:nth-of-type(' + (shownLinks++) + ')').addClass('incoming').css('display','flex');
+    $('.page-links > .page-link:nth-of-type(' + (shownLinks++) + ')').addClass('incoming').css('display','flex');
+    $('.page-links > .page-link:nth-of-type(' + (shownLinks++) + ')').addClass('incoming').css('display','flex');
+
+    setTimeout(function(){
+      pageLink.removeClass('incoming');
+    }, 1000)
+
+  })
 
 
 })( jQuery );

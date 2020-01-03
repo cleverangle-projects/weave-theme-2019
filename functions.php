@@ -101,3 +101,14 @@ function weaver_post_type() {
 }
 add_action( 'init', 'weaver_post_type' );
 
+function add_toolbar_items($wp_admin_bar) {
+  $home_id = get_option('page_on_front');
+
+  $wp_admin_bar->add_node( array(
+      'id'		=> 'edithome',
+      'title' => 'Edit Homepage',
+      'href' => '/wp-admin/post.php?post=' . $home_id . '&action=edit',
+  ) );
+}
+
+add_action('admin_bar_menu', 'add_toolbar_items', 999);
