@@ -67,15 +67,15 @@ get_header();
         <?php
       endif;
 
-      if ($box_type == 'one_col' || $box_type == 'about' || $box_type = 'sign_up' || $box_type = 'two_col' ):
-        echo '<div class="box-wide">';
+      if ($box_type == 'col_one' || $box_type == 'about' || $box_type = 'sign_up' || $box_type = 'col_two' ):
+        echo '<div class="box-wide" data-type="'. $box_type . '">';
         if ($show_headline) :
           echo '<h2 class="wow fadeIn">' . $headline . '</h2>';
         endif;
 
         echo '<div class="wow fadeIn">' . $copy . '</div>';
 
-        if ($box_type == 'two_col'):
+        if ($box_type == 'col_two'):
           echo '<div class="wow fadeIn">' . $copy_2 . '</div>';
         endif;
 
@@ -114,7 +114,7 @@ get_header();
             echo '</a>';
           endif;
         endif;
-        echo '</div>';
+        echo '</div><!-- box-wide -->';
       endif;
       echo '</div>';
     endwhile;
