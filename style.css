@@ -6,7 +6,7 @@
  Author:       AxiomThemes
  Author URI:   http://axiomthemes.com/
  Template:     rhodos
- Version:      1.35
+ Version:      1.4
  Tags:         inheritable theme options
  Text Domain:  rhodos
 */
@@ -14,3 +14,146 @@
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
+
+header#header #branding #logo img {
+    width: 400px !important;
+    height: auto !important;
+    margin: 16px 5vw;
+}
+
+@media (max-width: 767px) {
+    header#header {
+        height: 70px;
+    }
+    header#header #branding #logo img {
+        width: 220px !important;
+    }
+
+    #newsletter-signup .box-wide {
+        text-align: left;
+    }
+    #meet-the-weavers .box-wide {
+        text-align: center !important;
+    }
+    #be-a-weaver {
+        padding-bottom: 8vh;
+    }
+}
+
+header#header #branding {
+    width: auto;
+    /* 	max-width: 300px; */
+}
+
+
+footer#footer #logo-rev {
+    max-width: 700px;
+}
+
+.contact-links {
+    margin-bottom: 16px;
+}
+
+#we-can-heal .box-wide {
+    max-width: 1024px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+#content-boxes #we-are-weavers {
+    /*     margin-top: 70px; */
+}
+
+video::-webkit-media-controls {
+    display: none;
+}
+
+video {
+    pointer-events: none;
+}
+
+/* This used to work for the parent element of button divs */
+/* But it does not work with newer browsers, the below doesn't hide the play button parent div */
+
+*::-webkit-media-controls-panel {
+    display: none!important;
+    -webkit-appearance: none;
+}
+
+/* Old shadow dom for play button */
+
+*::-webkit-media-controls-play-button {
+    display: none!important;
+    -webkit-appearance: none;
+}
+
+/* New shadow dom for play button */
+
+/* This one works! */
+
+*::-webkit-media-controls-start-playback-button {
+    display: none!important;
+    -webkit-appearance: none;
+}
+
+.custom-video-controls {
+    z-index: 2147483647;
+}
+
+.single-weaver .page_content_wrap {
+    background-color: #262869 !important;
+}
+
+.page-id-2490 .page_content_wrap {
+    background-color: #262869 !important;
+}
+
+.form-row + p > div {
+    text-align: center;
+}
+
+.page-id-2490.scheme_default input[type="submit"] {
+    background-color: #F1931C !important;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+#meet-the-weavers a.weave-button {
+    display: none !important;
+}
+
+.scheme_default .trx_addons_scroll_to_top, .scheme_default .trx_addons_cv .trx_addons_scroll_to_top {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+#we-can-heal .box-wide {
+    min-height: 448px;
+}
+
+.post_content iframe {
+    max-width: 90%;
+    margin: 0 5%;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"] {
+
+
+}
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row textarea {
+    padding: 8px;
+    font-size: 16px;
+    border: 0;
+    background: #041C33;
+}
+
+@media (max-width: 767px) {
+    .page-template-default span.your-message {
+        padding: 0;
+    }
+}

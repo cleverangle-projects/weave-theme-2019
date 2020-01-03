@@ -31,11 +31,16 @@
     $('video#video-background').each(function() {
       $(this).controls = false;
       player = $(this)[0].player;
-      console.log($(this));
-
       player.remove();
     });
+
+    // var players = document.querySelectorAll("video[id^='video-background']");
+    // if (players.length > 0) {
+    //   console.log(players[0]);
+    // }
+
   });
+
 
 
   $('body.home').addClass('is-loading');
@@ -106,14 +111,13 @@
 // });
 
 let win = window.frames.example;
-console.log(win);
 
-// function resizeIframe(obj) {
-//   alert(obj.contentWindow.location.pathname);
-// }
+function resizeIframe(obj) {
+  // alert(obj.contentWindow.location.pathname);
+}
 
 window.addEventListener("message", function(event) {
-  console.log('logging messages');
+  console.log('logging iframe messages');
 
   // if (event.origin + '/' !== window.location.href && event.origin !== 'https://player.vimeo.com') {
   //   console.log(event.origin);
