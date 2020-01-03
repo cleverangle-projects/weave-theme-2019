@@ -75,11 +75,11 @@ get_header();
 
         echo '<div class="wow fadeIn">' . $copy . '</div>';
 
-        if ($box_type === 'two_col'):
+        if ($box_type == 'two_col'):
           echo '<div class="wow fadeIn">' . $copy_2 . '</div>';
         endif;
 
-        if ($box_type === 'sign_up'):
+        if ($box_type == 'sign_up'):
           echo '<iframe id="front-signup" name="example" onload="resizeIframe(this)" src="/sign-up" width="100%" height="100vh" frameborder="0" scrolling="no" ></iframe>';
         endif;
 
