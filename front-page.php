@@ -33,14 +33,14 @@ get_header();
 
       $bg = '';
 
-      if (have_rows('field_5e01965342ca1')) :
-        while (have_rows('field_5e01965342ca1')) : the_row();
-          $word = get_sub_field('field_5e01969442ca2');
-          $matchWords[] = "/$word/i";
-        endwhile;
-        $headline = preg_replace($matchWords, '<span class="highlighted">$0</span>', $headline);
-        $copy = preg_replace($matchWords, '<span class="highlighted">$0</span>', $copy);
-      endif;
+//      if (have_rows('field_5e01965342ca1')) :
+//        while (have_rows('field_5e01965342ca1')) : the_row();
+//          $word = get_sub_field('field_5e01969442ca2');
+//          $matchWords[] = "/$word/i";
+//        endwhile;
+//        $headline = preg_replace($matchWords, '<span class="highlighted">$0</span>', $headline);
+//        $copy = preg_replace($matchWords, '<span class="highlighted">$0</span>', $copy);
+//      endif;
 
       if ($bg_type == 'image') {
         $bg = 'background-image: url(' . $image .')';
@@ -58,65 +58,70 @@ get_header();
               get_row_index() . '" style="' . $bg . '">';
 
       if (get_row_index() == 1):
-        ?>
-        <div class="background-video-container">
-          <video autoplay loop id="video-background" muted playsinline controls="false">
-
-          </video>
-        </div>
-        <?php
-      endif;
-
-      if ($box_type == 'col_one' || $box_type == 'about' || $box_type = 'sign_up' || $box_type = 'col_two' ):
         echo '<div class="box-wide" data-type="'. $box_type . '">';
-        if ($show_headline) :
-          echo '<h2 class="wow fadeIn">' . $headline . '</h2>';
-        endif;
+        ?>
+          <div class="background-video-container">
+            <video autoplay loop id="video-background" muted playsinline controls="false">
 
-        echo '<div class="wow fadeIn">' . $copy . '</div>';
+            </video>
+          </div>
+        <?php
+        echo '</div>';
+      else:
 
-        if ($box_type == 'col_two'):
-          echo '<div class="wow fadeIn">' . $copy_2 . '</div>';
-        endif;
+        echo '<div class="box-wide" data-type="'. $box_type . '">';
+          if ($box_type == 'col_one' || $box_type == 'about' || $box_type = 'sign_up' || $box_type = 'col_two' ):
 
-        if ($box_type == 'sign_up'):
-          echo '<iframe id="front-signup" name="example" onload="resizeIframe(this)" src="/sign-up" width="100%" height="100vh" frameborder="0" scrolling="no" ></iframe>';
-        endif;
+            if ($box_type === 'sign_up'):
+              echo '<iframe id="front-signup" name="example" onload="resizeIframe(this)" src="/sign-up" width="100%" height="100vh" frameborder="0" scrolling="no" ></iframe>';
+            endif;
+            if ($show_headline) :
+              echo '<h2 class="wow fadeIn">' . $headline . '</h2>';
+            endif;
 
-        if ($box_type == 'about') :
-          if( have_rows('field_5df6d0fddcce4') ):
-            echo '<div class="page-links">';
-            while ( have_rows('field_5df6d0fddcce4') ) : the_row();
-              $post_object = get_sub_field('field_5df6d110dcce5');
-              if( $post_object ):
-                $post = $post_object;
-                $page_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
+            echo '<div class="wow fadeIn">' . $copy . '</div>';
 
-                setup_postdata( $post);
+            if ($box_type == 'col_two'):
+              echo '<div class="wow fadeIn">' . $copy_2 . '</div>';
+            endif;
 
-                ?>
-                <a class="page-link" href="<?php the_permalink(); ?>">
-                  <div class="page-thumbnail" style="background-image: url('<?php echo
-                  $page_image; ?>')">
 
-                  </div>
-                  <h4><?php the_title(); ?></h4>
-                </a>
-                <?php
-                wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
+            if ($box_type == 'about') :
+              if( have_rows('field_5df6d0fddcce4') ):
+                echo '<div class="page-links">';
+                while ( have_rows('field_5df6d0fddcce4') ) : the_row();
+                  $post_object = get_sub_field('field_5df6d110dcce5');
+                  if( $post_object ):
+                    $post = $post_object;
+                    $page_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
+
+                    setup_postdata( $post);
+
+                    ?>
+                    <a class="page-link" href="<?php the_permalink(); ?>">
+                      <div class="page-thumbnail" style="background-image: url('<?php echo
+                      $page_image; ?>')">
+
+                      </div>
+                      <h4><?php the_title(); ?></h4>
+                    </a>
+                    <?php
+                    wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
+                  endif;
+                endwhile;
+                echo '</div>';
+                echo '<a class="weave-button" href="#"><span>More Stories</span>';
+                echo '<span>';
+                echo '<svg id="arrow-down" viewBox="0 0 18 11"><polygon points="16,0 9,7 2,0 0,2 9,11 18,2 "></polygon></svg></a>';
+                echo '</span>';
+                echo '</a>';
               endif;
-            endwhile;
-            echo '</div>';
-            echo '<a class="weave-button" href="#"><span>More Stories</span>';
-            echo '<span>';
-            echo '<svg id="arrow-down" viewBox="0 0 18 11"><polygon points="16,0 9,7 2,0 0,2 9,11 18,2 "></polygon></svg></a>';
-            echo '</span>';
-            echo '</a>';
-          endif;
+            endif;
+          echo '</div><!-- box-wide -->';
         endif;
-        echo '</div><!-- box-wide -->';
       endif;
-      echo '</div>';
+        echo '</div>';
+
     endwhile;
   else :
     // no rows found\
