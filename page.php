@@ -37,10 +37,13 @@ if (is_page( 'Contact Us' )) :
 <div id="contact-form">
   <div>
     <?php echo do_shortcode('[contact-form-7 id="2545" title="Contact form 1"]') ?>
-
   </div>
 </div>
 
 <?php
+else:
+  echo '<div id="tfaform">';
+  echo '<iframe id="front-signup" name="example" onload="resizeIframe(this)" src="/sign-up" width="100%" height="100vh" frameborder="0" scrolling="no" > </iframe>';
+  echo '</div>';
 endif;
 get_footer();

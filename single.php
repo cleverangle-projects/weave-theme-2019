@@ -55,6 +55,10 @@ while ( have_posts() ) {
   if ( comments_open() || get_comments_number() ) {
     comments_template();
   }
+
+  echo '<div id="tlaform">';
+  echo '<iframe id="front-signup" name="example" onload="resizeIframe(this)" src="/sign-up" width="100%" height="100vh" frameborder="0" scrolling="no" > </iframe>';
+  echo '</div>';
 }
 
 get_footer();
