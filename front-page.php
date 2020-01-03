@@ -66,9 +66,12 @@ get_header();
         </div>
       <?php
         echo '<div class="box-wide" data-type="'. $box_type . '">';
+        if ($show_headline) :
+          echo '<h2 class="wow fadeIn">' . $headline . '</h2>';
+        endif;
+        echo '<div class="wow fadeIn">' . $copy . '</div>';
         echo '</div>';
       else:
-
         echo '<div class="box-wide" data-type="'. $box_type . '">';
           if ($box_type == 'col_one' || $box_type == 'about' || $box_type = 'sign_up' || $box_type = 'col_two' ):
 
