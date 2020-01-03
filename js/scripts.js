@@ -75,21 +75,28 @@
   req.send();
 
   // More Stories
-
-  let shownLinks = 4;
+  let shownLinks = 4,
+      pageLink = $('.page-links > .page-link');
 
   $('.box-type-about_box .weave-button').on('click', function(e) {
     e.preventDefault();
-    var pageLink = $('.page-links > .page-link');
+
+
     $('.page-links > .page-link:nth-of-type(' + (shownLinks++) + ')').addClass('incoming').css('display','flex');
     $('.page-links > .page-link:nth-of-type(' + (shownLinks++) + ')').addClass('incoming').css('display','flex');
     $('.page-links > .page-link:nth-of-type(' + (shownLinks++) + ')').addClass('incoming').css('display','flex');
+
+    $('.page-links').addClass('loading-new');
 
     setTimeout(function(){
       pageLink.removeClass('incoming');
-    }, 1000)
+      $('.page-links').removeClass('loading-new');
+    }, 4000)
 
-  })
+    if ( shownLinks > pageLink.length) {
+      $(this).hide();
+    }
+  });
 
 
 })( jQuery );

@@ -48,14 +48,8 @@
     </div>
     <div id="hamburger-btn"></div>
     <nav id="menu" data-rellax-speed="-4" data-rellax-zindex="10"r>
-      <?php //wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+      <?php wp_nav_menu( array( 'theme_location' => 'weave_menu' ) ); ?>
 
-      <ul>
-        <li class="page_item page-item-2466 current_page_item"><a href="/" aria-current="page">Home</a></li>
-<!--        <li class="page_item page-item-2484"><a href="/meet-the-weavers/">Meet the Weavers</a></li>-->
-<!--        <li class="page_item page-item-2486"><a href="/the-weave-story/">The Weave Story</a></li>-->
-<!--        <li class="page_item page-item-2488"><a href="/be-a-weaver/">Be a Weaver</a></li>-->
-        <li class="page_item page-item-2490"><a href="/contact-us/">Contact Us</a></li>
-      </ul>
+
     </nav>
   </header>

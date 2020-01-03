@@ -15,11 +15,6 @@
 /* =Theme customization starts here
 -------------------------------------------------------------- */
 
-header#header #branding #logo img {
-    width: 400px !important;
-    height: auto !important;
-    margin: 16px 5vw;
-}
 
 @media (max-width: 767px) {
     header#header {

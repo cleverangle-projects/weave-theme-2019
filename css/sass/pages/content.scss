@@ -6,6 +6,11 @@
     padding-bottom: 0;
   }
 
+  .content {
+    background: #262869;
+  }
+
+
   .content_wrap {
     width: 100% !important;
   }
@@ -181,6 +186,12 @@
       @media (max-width: 700px) {
         height: 70vh !important;
       }
+    }
+  }
+
+  @media (max-width: 640px) {
+    #tlaform * {
+      text-align: left !important;
     }
   }
 

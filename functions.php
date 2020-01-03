@@ -92,7 +92,9 @@ function weaver_post_type() {
               'name' => __( 'Weavers' ),
               'singular_name' => __( 'Weaver' )
           ),
-          'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'page-attributes'),
+          'show_in_rest' => true,
+          'supports'  => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions',
+              'page-attributes'),
           'public' => true,
           'has_archive' => false,
           'rewrite' => array('slug' => 'weavers'),
@@ -100,6 +102,14 @@ function weaver_post_type() {
   );
 }
 add_action( 'init', 'weaver_post_type' );
+
+
+
+function register_weave_menu() {
+  register_nav_menu( 'weave_menu', __( 'Primary Weave Menu', 'rhodos' ) );
+}
+add_action( 'after_setup_theme', 'register_weave_menu' );
+
 
 function add_toolbar_items($wp_admin_bar) {
   $home_id = get_option('page_on_front');
