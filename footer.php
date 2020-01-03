@@ -68,7 +68,9 @@ if ( $rhodos_show_widgets || $rhodos_show_related ) {
 
 <?php
 if ( get_theme_mod( 'brand_logo_reverse' ) ) :
-$brand_logo_rev = get_theme_mod( 'brand_logo_reverse');
+  $brand_logo_rev = get_theme_mod( 'brand_logo_reverse');
+else:
+  $brand_logo_rev = get_stylesheet_directory_uri() . '/css/img/weave-aspen-logo-rev.png';
 endif;
 ?>
   <div class="contact-links">

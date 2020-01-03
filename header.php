@@ -8,10 +8,10 @@
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js
-                  <?php                   
-                    echo ' scheme_' . esc_attr( rhodos_get_theme_option( 'color_scheme' ) );
-                  ?>
-                    ">
+    <?php
+      echo ' scheme_' . esc_attr( rhodos_get_theme_option( 'color_scheme' ) );
+    ?>
+      ">
 <head>
   <?php wp_head(); ?>
 </head>

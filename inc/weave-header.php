@@ -3,6 +3,8 @@
       <?php
         if ( get_theme_mod( 'brand_logo' ) ) :
           $brand_logo = get_theme_mod( 'brand_logo');
+        else:
+          $brand_logo = get_stylesheet_directory_uri() . '/css/img/weave-aspen-logo.png';
         endif;
       ?>
       <a id="logo" href="/">
