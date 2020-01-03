@@ -98,3 +98,9 @@ function weaver_post_type() {
 }
 add_action( 'init', 'weaver_post_type' );
 
+function nim_show_editor(){ ?>
+  <style type="text/css">
+    #postdivrich {display: block !important;}
+  </style> <?php
+}
+add_action('admin_init', 'nim_show_editor');
