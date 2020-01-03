@@ -85,7 +85,7 @@ get_header();
             echo '<div class="wow fadeIn">' . $copy . '</div>';
 
             if ($box_type == 'col_two'):
-              echo '<div class="wow fadeIn">' . $copy_2 . '</div>';
+              echo '<div class="wow fadeIn copy_two">' . $copy_2 . '</div>';
             endif;
 
 
