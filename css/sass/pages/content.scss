@@ -153,12 +153,14 @@
   }
 
   #tlaform {
+    width: 80%;
+    margin: 10vh auto 0;
     background: $purple;
 
     p {
       width: 90%;
       max-width: 1024px;
-      margin: 10vh auto;
+      margin: 10vh auto 1em;
       color: #fff;
       font-size: 1.75em;
       text-align: center;
