@@ -73,7 +73,8 @@ get_header();
         echo '</div>';
       else:
         echo '<div class="box-wide" data-type="'. $box_type . '">';
-          if ($box_type == 'col_one' || $box_type == 'about' || $box_type = 'sign_up' || $box_type = 'col_two' ):
+          if ($box_type == 'col_one_box' || $box_type == 'about' || $box_type = 'sign_up' ||
+                  $box_type = 'col_two_box' ):
 
             if ($box_type === 'sign_up'):
               echo '<iframe id="front-signup" name="example" onload="resizeIframe(this)" src="/sign-up" width="100%" height="100vh" frameborder="0" scrolling="no" ></iframe>';
@@ -84,7 +85,7 @@ get_header();
 
             echo '<div class="wow fadeIn">' . $copy . '</div>';
 
-            if ($box_type == 'col_two'):
+            if ($box_type == 'col_two_box'):
               echo '<div class="wow fadeIn copy_two">' . $copy_2 . '</div>';
             endif;
 
