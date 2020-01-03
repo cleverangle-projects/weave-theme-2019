@@ -79,6 +79,10 @@ get_header();
           echo '<div class="wow fadeIn">' . $copy_2 . '</div>';
         endif;
 
+        if ($box_type == 'sign_up'):
+          echo '<iframe id="front-signup" name="example" onload="resizeIframe(this)" src="/sign-up" width="100%" height="100vh" frameborder="0" scrolling="no" ></iframe>';
+        endif;
+
         if ($box_type == 'about') :
           if( have_rows('field_5df6d0fddcce4') ):
             echo '<div class="page-links">';
@@ -111,9 +115,6 @@ get_header();
           endif;
         endif;
         echo '</div>';
-        if ($box_type == 'sign_up'):
-          echo '<iframe id="front-signup" name="example" onload="resizeIframe(this)" src="/sign-up" width="100%" height="100vh" frameborder="0" scrolling="no" ></iframe>';
-        endif;
       endif;
       echo '</div>';
     endwhile;
