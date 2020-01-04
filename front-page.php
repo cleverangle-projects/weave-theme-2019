@@ -74,15 +74,20 @@ get_header();
       else:
         echo '<div class="box-wide" data-type="'. $box_type . '">';
 
-            if ($show_headline) :
-              echo '<h2 class="wow fadeIn">' . $headline . '</h2>';
-            endif;
+        if ($box_type == 'col_two_box') :
+          echo '<div class="copy_one">';
+        endif;
 
-            echo '<div class="wow fadeIn">' . $copy . '</div>';
+        if ($show_headline) :
+          echo '<h2 class="wow fadeIn">' . $headline . '</h2>';
+        endif;
 
-            if ($box_type == 'col_two_box') :
-              echo '<div class="wow fadeIn copy_two">' . $copy_2 . '</div>';
-            endif;
+        echo '<div class="wow fadeIn">' . $copy . '</div>';
+
+        if ($box_type == 'col_two_box') :
+          echo '</div>';
+          echo '<div class="copy_two">' . $copy_2 . '</div>';
+        endif;
 
             if ($box_type == 'sign_up_box') :
               echo '<iframe id="signup" name="salesforce" onload="reloadIframe(this)" src="/sign-up" width="100%" height="100vh" frameborder="0" scrolling="no" ></iframe>';

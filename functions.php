@@ -89,8 +89,8 @@ function weaver_post_type() {
 // CPT Options
       array(
           'labels' => array(
-              'name' => __( 'Weavers' ),
-              'singular_name' => __( 'Weaver' )
+              'name' => __( 'Weaver Stories' ),
+              'singular_name' => __( 'Weaver Story' )
           ),
           'show_in_rest' => true,
           'supports'  => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions',

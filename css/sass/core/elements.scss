@@ -19,15 +19,6 @@ url('./fonts/avenirnext-bold.ttf') format('truetype'),
   url('./fonts/avenirnext-bold.svg#AvenirNextBold') format('svg');
 }
 
-//@font-face {
-//  font-family: 'journal';
-//  src: url('./fonts/journal-webfont.woff2') format('woff2'),
-//  url('./fonts/journal-webfont.woff') format('woff'),
-//  url('./fonts/journal-webfont.ttf') format('truetype');
-//  font-weight: bold;
-//  font-style: normal;
-//}
-
 
 .trx_addons_scroll_to_top {
   background-color: $purple !important;
@@ -90,6 +81,10 @@ p {
   padding: 12px 24px;
   font-weight: 800;
 
+}
+
+.wow {
+  animation-delay: 250ms;
 }
 
 

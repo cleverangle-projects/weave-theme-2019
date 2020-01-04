@@ -9,6 +9,13 @@
     $('#hamburger-btn').removeClass('open');
   });
 
+  $('#be-a-weaver .weave-button').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $('#newsletter-signup').offset().top - 100
+    }, 750)
+  });
+
   $(document).ready(function() {
     var wow = new WOW(
         {

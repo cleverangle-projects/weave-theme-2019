@@ -120,9 +120,6 @@ video {
     opacity: 0 !important;
 }
 
-#we-can-heal .box-wide {
-    min-height: 448px;
-}
 
 .post_content iframe {
     max-width: 90%;
