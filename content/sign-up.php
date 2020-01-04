@@ -146,10 +146,12 @@
             <label id="tfa_122-L" class="label preField " for="tfa_122">Country</label><div class="inputWrapper"><input type="text" id="tfa_122" name="tfa_122" value="" title="Country" class=""></div>
           </div>
         </div>
-        <div class="oneField field-container-D    " id="tfa_106-D">
+        <div class="oneField field-container-D    " id="tfa_106-D" style="flex: auto !important;
+        width: 100% !important; border: 0 !important;">
           <label id="tfa_106-L" class="label preField " for="tfa_106">What interests you about
-            the Weave project?</label><div class="inputWrapper select"><select id="tfa_106"
-                                                                          name="tfa_106" title="What interests you about the Weave project?" class=""><option value="">Please select...</option>
+            the Weave project?</label><div class="inputWrapper select">
+            <select id="tfa_106" name="tfa_106" title="What interests you about the Weave
+            project?" class="" style="padding: 6px 8px !important;"><option value="">Please select...</option>
               <option value="tfa_107" id="tfa_107" class="">I want to hear more about Weave's work.</option>
               <option value="tfa_108" id="tfa_108" class="">I'm a weaver and want to get involved.</option>
               <option value="tfa_109" id="tfa_109" data-conditionals="#tfa_114,#tfa_115,#tfa_117" class="">My organization weaves people and you should know about us.</option>
@@ -158,16 +160,23 @@
               <option value="tfa_112" id="tfa_112" data-conditionals="#tfa_113" class="">Something else</option></select></div>
         </div>
         <div class="oneField field-container-D    " id="tfa_117-D">
-          <label id="tfa_117-L" class="label preField " for="tfa_117">Website:</label><div class="inputWrapper"><input type="text" id="tfa_117" name="tfa_117" value="" data-condition="`#tfa_109`" title="Website:" class=""></div>
+          <label id="tfa_117-L" class="label preField " for="tfa_117">Website</label><div class="inputWrapper"><input type="text" id="tfa_117" name="tfa_117" value="" data-condition="`#tfa_109`" title="Website" class=""></div>
         </div>
         <div class="oneField field-container-D    " id="tfa_115-D">
-          <label id="tfa_115-L" class="label preField " for="tfa_115">Organization name:</label><div class="inputWrapper"><input type="text" id="tfa_115" name="tfa_115" value="" data-condition="`#tfa_109`" title="Organization name:" class=""></div>
+          <label id="tfa_115-L" class="label preField " for="tfa_115">Organization name</label><div class="inputWrapper"><input type="text" id="tfa_115" name="tfa_115" value="" data-condition="`#tfa_109`" title="Organization name" class=""></div>
         </div>
         <div class="oneField field-container-D    " id="tfa_114-D">
-          <label id="tfa_114-L" class="label preField " for="tfa_114">Please describe:</label><div class="inputWrapper"><textarea id="tfa_114" name="tfa_114" data-condition="`#tfa_110` OR `#tfa_109`" title="Please describe:" class=""></textarea></div>
+          <label id="tfa_114-L" class="label preField " for="tfa_114">Please describe</label><div
+              class="inputWrapper textarea"><textarea id="tfa_114" name="tfa_114"
+                                                      data-condition="`#tfa_110` OR `#tfa_109`"
+                                                      title="Please describe" class=""
+                                                      placeholder="Please describe"></textarea></div>
         </div>
         <div class="oneField field-container-D    " id="tfa_113-D">
-          <label id="tfa_113-L" class="label preField " for="tfa_113">Please describe:</label><div class="inputWrapper"><input type="text" id="tfa_113" name="tfa_113" value="" data-condition="`#tfa_112`" title="Please describe:" class=""></div>
+          <label id="tfa_113-L" class="label preField " for="tfa_113">Please describe</label><div
+              class="inputWrapper something-else"><input type="text" id="tfa_113" name="tfa_113"
+                                                     value=""
+                                            data-condition="`#tfa_112`" title="Please describe" class=""></div>
         </div>
         <div class="actions" id="4693583-A"><input type="submit" data-label="Submit" class="primaryAction" id="submit_button" value="Submit"></div>
         <div style="clear:both"></div>

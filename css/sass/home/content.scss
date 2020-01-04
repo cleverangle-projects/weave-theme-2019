@@ -16,15 +16,20 @@
   height: calc(100vh - 90px);
 }
 
-.box-type-col_two_box {
+#content-boxes .box-type-col_two_box {
   .box-wide {
     display: flex;
     flex-direction: row;
+    width: 100% !important;
     margin: 0 -15px;
 
     > div {
       flex: 1;
       padding: 0 15px;
+
+      &:last-child {
+        flex: 1.25;
+      }
     }
 
     @media (max-width: 767px) {

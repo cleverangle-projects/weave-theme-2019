@@ -62,13 +62,17 @@ body.form-wrapper {
 
     }
 
-    input {
+    input,
+    select,
+    option,
+    textarea {
       font-family: 'Nunito';
+      font-size: 16px;
       //color: #fff;
     }
 
     input {
-      color: #fff !important;
+      color: #ddd !important;
     }
 
     input[type="text"],
@@ -88,12 +92,25 @@ body.form-wrapper {
 
   }
 
-  .select {
-    width: 100%;
-    min-width: 100%;
+  .select,
+  .textarea {
+    width: 100% !important;
+    min-width: 100% !important;
 
     select {
       min-width: 95.5% !important;
+      color: #ddd;
+      -webkit-appearance: none;
+    }
+
+    input,
+    textarea {
+      min-width: 95.5% !important;
+      background: #041C33 !important;
+    }
+
+    option {
+      color: #fff;
     }
 
     @media (max-width: 767px) {
@@ -105,6 +122,16 @@ body.form-wrapper {
       }
     }
   }
+
+  .something-else {
+    min-width: 95.5% !important;
+
+    input {
+      width: 100%;
+    }
+  }
+
+
 
   input[type="submit"],
   #submit_button {

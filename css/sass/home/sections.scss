@@ -108,6 +108,12 @@
       margin-top: 5vh;
       margin-bottom: 5vh;
 
+      > div:last-child {
+        p {
+          text-align: right;
+        }
+      }
+
       h2 {
         margin-top: 0;
         text-align: left;
