@@ -212,3 +212,15 @@ add_action( 'widgets_init', 'register_weave_stories' );
 function register_weave_stories() {
   register_widget( 'Weave_Stories_Widget' );
 }
+
+
+add_filter( 'display_post_states', 'ecs_add_post_state', 10, 2 );
+function ecs_add_post_state( $post_states, $post ) {
+  if( $post->post_name == 'our-stories' ) {
+    $post_states[] = 'Our Stories Page';
+  }
+  if( $post->post_name == 'join-us' ) {
+    $post_states[] = 'Join Us Page';
+  }
+  return $post_states;
+}
