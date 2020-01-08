@@ -31,7 +31,7 @@ while ( have_posts() ) {
         setup_postdata( $post);
 
         ?>
-        <div class="page-link roll-link">
+        <a class="page-link roll-link" href="<?php the_permalink(); ?>">
           <div class="staff-wrapper">
           <div class="page-thumbnail" style="background-image: url('<?php echo
           $page_image; ?>')">
@@ -40,7 +40,7 @@ while ( have_posts() ) {
           </div>
           <h4><?php the_title(); ?></h4>
           <p class="quote"><?php echo get_field('field_5e15f8d365ec3') ?></p>
-        </div>
+        </a>
 
         <?php
 
