@@ -62,5 +62,32 @@ while ( have_posts() ) {
   echo '<div id="successful-signup" style="font-size: 18px;">Thank you for signing up. You can expect to hear from us every two weeks.</div>';
   echo '</div>';
 }
+?>
+
+  <script>
+    (function($) {
+      window.addEventListener("message", function(event) {
+        var iframeH = $('#signup');
+        var formH = event.data['height'];
+        var optionSel = event.data['value'];
+
+        var extra = 100;
+        if ($(window).height() < 700) {
+          extra = 100;
+        }
+        console.log(formH + extra);
+        console.log(formH + ' vs ' + iframeH.height());
+
+        if ((formH > iframeH.height() - 10) && (optionSel == 'tfa_109')) {
+          $('#signup').css('height', formH + extra + 'px');
+          //$('#signup').attr('style', function(i,s) { return (s || '') + 'height: ' + iframeH.height() + 60 + 'px !important;' });
+          console.log('new height:' + iframeH.height());
+        }
+      });
+
+    })( jQuery );
+  </script>
+
+<?php
 
 get_footer();
