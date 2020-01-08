@@ -106,7 +106,7 @@ get_header();
                     setup_postdata( $post);
 
                     ?>
-                    <a class="page-link" href="<?php the_permalink(); ?>">
+                    <a class="page-link home-link" href="<?php the_permalink(); ?>">
                       <div class="page-thumbnail" style="background-image: url('<?php echo
                       $page_image; ?>')">
 
