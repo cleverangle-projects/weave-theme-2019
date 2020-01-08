@@ -59,7 +59,6 @@
   var FA$ = $.noConflict(true);
   if (FAoldJQ) $ = FAoldJQ;
 </script>
-
 <style type="text/css">
 
   .wFormContainer input[type="submit"], .wFormContainer #submit_button {
@@ -83,6 +82,20 @@
     align-items: center;
     justify-content: center;
   }
+
+  @media (max-width: 568px) {
+    .wFormContainer .inputWrapper {
+      width: 96% !important;
+    }
+  }
+
+  #tfa_105-E.errMsg {
+    display: none !important;
+    height:  0 !important;
+    line-height: 0 !important;
+  }
+
+
 </style>
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -92,7 +105,7 @@
 
 <!-- FORM: BODY SECTION -->
 <body class="form-wrapper">
-<div class="wFormContainer" id="wFormContainer" >
+<div class="wFormContainer" id="wFormContainer">
   <div class="wFormHeader"></div>
   <style type="text/css">
     #tfa_106,
@@ -200,8 +213,8 @@
         <div class="oneField field-container-D    " id="tfa_113-D">
           <label id="tfa_113-L" class="label preField " for="tfa_113">Please describe</label><div
               class="inputWrapper something-else"><input type="text" id="tfa_113" name="tfa_113"
-                                                     value=""
-                                            data-condition="`#tfa_112`" title="Please describe" class=""></div>
+                                                         value=""
+                                                         data-condition="`#tfa_112`" title="Please describe" class=""></div>
         </div>
         <div class="actions" id="4693583-A"><input type="submit" data-label="Submit" class="primaryAction" id="submit_button" value="Submit"></div>
         <div style="clear:both"></div>
@@ -235,6 +248,6 @@
     window.parent.postMessage({"height": tfaForm.offsetHeight, "value": selectedOption.value}, "*")
   }
 
-  document.getElementById("tfa_106").addEventListener("change", sendHeight);
+  document.getElementById("4693583").addEventListener("change", sendHeight);
 </script>
 </body>

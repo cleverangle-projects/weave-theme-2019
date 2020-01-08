@@ -106,17 +106,20 @@
   });
 
   window.addEventListener("message", function(event) {
+    var iframeH = $('#signup');
+    var formH = event.data['height'];
+    var optionSel = event.data['value'];
 
+    var extra = 100;
+    if ($(window).height() < 700) {
+      extra = 100;
+    }
+    console.log(formH + extra);
+    console.log(formH + ' vs ' + iframeH.height());
 
-    iframeH = $('#signup');
-    formH = event.data['height'];
-    optionSel = event.data['value'];
-
-    console.log(event.data);
-    console.log(iframeH.height());
-
-    if ((formH > iframeH.height() + 10) && (optionSel == 'tfa_109')) {
-      $('#signup').css('height', formH + 100 + 'px');
+    if ((formH > iframeH.height() - 10) && (optionSel == 'tfa_109')) {
+      $('#signup').css('height', formH + extra + 'px');
+      //$('#signup').attr('style', function(i,s) { return (s || '') + 'height: ' + iframeH.height() + 60 + 'px !important;' });
       console.log('new height:' + iframeH.height());
     }
   });
