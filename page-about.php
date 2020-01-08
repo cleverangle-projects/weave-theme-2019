@@ -21,6 +21,7 @@ while ( have_posts() ) {
 
   ?>
   <div id="staff" class="page-links">
+    <h2>The Weave Team</h2>
     <?php
 
     $loop = new WP_Query( array( 'post_type' => 'weaver', 'ignore_sticky_posts' => 1) );
