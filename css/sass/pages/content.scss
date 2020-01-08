@@ -75,10 +75,23 @@
     }
   }
 
+  .nav-links-single {
+    padding-top: 1em;
+
+    .nav-links {
+      margin-top: 0;
+    }
+  }
+
   article {
     min-height: 33vh;
     margin-top: -10vh;
     font-size: 18px;
+
+    &.post_item_single {
+      min-height: 25vh;
+      padding-bottom: 1em;
+    }
 
     .post_content iframe {
       max-width: 80%;
