@@ -11,9 +11,11 @@
 
   $('#be-a-weaver .weave-button').on('click', function(e) {
     e.preventDefault();
-    $('html, body').animate({
-      scrollTop: $('#newsletter-signup').offset().top - 100
-    }, 750)
+    // $('html, body').animate({
+    //   scrollTop: $('#newsletter-signup').offset().top - 100
+    // }, 750)
+
+    window.location.href = '/join-us';
   });
 
   $(document).ready(function() {
