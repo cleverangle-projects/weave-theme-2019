@@ -24,14 +24,20 @@ while ( have_posts() ) {
     <h2>The Weave Team</h2>
     <?php
 
-    $loop = new WP_Query( array( 'post_type' => 'weaver', 'ignore_sticky_posts' => 1) );
+    $loop = new WP_Query( array( 'post_type' => 'team', 'ignore_sticky_posts' => 1) );
     if ( $loop->have_posts() ) :
       while ( $loop->have_posts() ) : $loop->the_post();
         $page_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
         setup_postdata( $post);
 
         ?>
+        <a class="page-link roll-link" href="<?php the_permalink(); ?>">
+          <div class="page-thumbnail" style="background-image: url('<?php echo
+          $page_image; ?>')">
 
+          </div>
+          <h4><?php the_title(); ?></h4>
+        </a>
         <?php
         wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
 
