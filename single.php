@@ -18,7 +18,15 @@ while ( have_posts() ) {
   <div id="hero" style="background-image: url(<?php echo $page_image ?>);">
     <h1><?php the_title() ?></h1>
   </div>
+
+  <?php if ( is_singular( 'team' ) ): ?>
+  <article class="bio">
+    <h1><?php the_title() ?></h1>
+    <span class="title"><?php echo get_field('field_5e15f8d365ec3')  ?></span>
+    <span class="quote"><?php echo get_field('field_5e15f8d865ec4')  ?></span>
+  </article>
   <?php
+  endif;
 
   get_template_part( apply_filters( 'rhodos_filter_get_template_part', 'content', get_post_format() ), get_post_format() );
 
@@ -27,6 +35,7 @@ while ( have_posts() ) {
   $rhodos_fixed_posts_navigation = ! rhodos_is_off( rhodos_get_theme_option( 'fixed_posts_navigation' ) ) ? 'nav-links-fixed fixed' : '';
   if ( $rhodos_show_posts_navigation ) {
     ?>
+    <?php if ( is_singular( 'weaver' ) ): ?>
     <div class="nav-links-single<?php echo ' ' . esc_attr( $rhodos_fixed_posts_navigation ); ?>">
       <?php
       the_post_navigation(
@@ -44,6 +53,7 @@ while ( have_posts() ) {
       ?>
     </div>
     <?php
+    endif;
   }
 
   // Related posts
