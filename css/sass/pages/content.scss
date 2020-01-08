@@ -268,5 +268,42 @@
       background: none !important;
     }
   }
+
+  .page-links > .page-link {
+    flex-direction: column;
+    height: 40vh;
+    max-height: 320px;
+
+    .staff-wrapper {
+      position: relative;
+      height: 80%;
+      width: 100%;
+      overflow: hidden !important;
+      transition: 250ms all;
+    }
+
+    h4 {
+      flex: 1;
+      width: 100%;
+      background: #fff;
+      color: #000;
+      opacity: 1 !important;
+
+      &:before {
+        content: "";
+        display: block;
+        height: 12px;
+        background: #fff;
+      }
+    }
+
+    //&:hover {
+    //  .page-thumbnail {
+    //    transform: none;
+    //
+    //  }
+    //}
+  }
+
 }
 

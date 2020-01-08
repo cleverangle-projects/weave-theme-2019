@@ -32,8 +32,10 @@ while ( have_posts() ) {
 
         ?>
         <div class="page-link roll-link">
+          <div class="staff-wrapper">
           <div class="page-thumbnail" style="background-image: url('<?php echo
           $page_image; ?>')">
+          </div>
           </div>
           <h4><?php the_title(); ?></h4>
         </div>
