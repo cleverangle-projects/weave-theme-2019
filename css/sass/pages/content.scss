@@ -1,5 +1,6 @@
 .weaver-template-default,
 .page-template-default,
+.page-template-page-about,
 .page-template-page-join,
 .page-template-page-stories {
 
@@ -58,7 +59,8 @@
   article,
   .nav-links-single,
   .related_wrap,
-  #stories {
+  #stories,
+  #staff {
     position: relative;
     width: 80%;
     max-width: 1024px;
@@ -228,12 +230,14 @@
   }
 }
 
-.page-template-page-stories {
+.page-template-page-stories,
+.page-template-page-about {
   article {
     min-height: 120px;
     padding-bottom: 0;
   }
 
+  #staff,
   #stories {
     padding-top: 0;
   }

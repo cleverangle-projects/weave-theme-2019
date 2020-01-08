@@ -97,12 +97,33 @@ function weaver_post_type() {
               'page-attributes'),
           'public' => true,
           'has_archive' => false,
+          'menu_icon' => 'dashicons-universal-access-alt',
           'rewrite' => array('slug' => 'weavers'),
       )
   );
 }
 add_action( 'init', 'weaver_post_type' );
 
+
+function team_post_type() {
+  register_post_type( 'team',
+// CPT Options
+      array(
+          'labels' => array(
+              'name' => __( 'Team' ),
+              'singular_name' => __( 'Team Member' )
+          ),
+          'show_in_rest' => true,
+          'supports'  => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions',
+              'page-attributes'),
+          'public' => true,
+          'has_archive' => false,
+          'menu_icon' => 'dashicons-admin-users',
+          'rewrite' => array('slug' => 'team'),
+      )
+  );
+}
+add_action( 'init', 'team_post_type' );
 
 
 function register_weave_menu() {
