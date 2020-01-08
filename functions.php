@@ -134,3 +134,60 @@ function content_widgets_init() {
   ) );
 }
 add_action( 'widgets_init', 'content_widgets_init' );
+
+class Weave_Stories_Widget extends WP_Widget {
+
+  function __construct() {
+    parent::__construct(
+        'weave-stories',
+        __( 'Weave Stories', 'rhodos' ),
+        array(
+            'description' => __('Shows Weave Stories in a grid', 'rhodos' ),
+            'menu_icon'   => 'dashicons-format-aside',
+        )
+    );
+
+  }
+
+  function widget( $args, $instance ) {
+    static $widget_called = false;
+    if ($widget_called) return;
+
+    if(!empty($_POST['widget_name'])) {
+      $widget_name = $instance['widget_name'];
+    }
+
+    ?>
+    <div>Weave Stories Go Here</div>
+    <?php
+  }
+
+  function update( $new_instance, $old_instance ) {
+    $instance = array();
+    $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+    return $instance;
+  }
+
+  function form( $instance ) {
+    $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Stories', 'rhodos' );
+    ?>
+    <p>
+      <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>">
+        <?php esc_attr_e( 'Title:', 'rhodos' ); ?>
+      </label>
+
+      <input
+          class="widefat"
+          id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
+          name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>"
+          type="text"
+          value="<?php echo esc_attr( $title ); ?>">
+    </p>
+    <?php
+  }
+}
+
+add_action( 'widgets_init', 'register_weave_stories' );
+function register_weave_stories() {
+  register_widget( 'Weave_Stories_Widget' );
+}

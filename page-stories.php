@@ -19,6 +19,39 @@ while ( have_posts() ) {
 
   get_template_part( apply_filters( 'rhodos_filter_get_template_part', 'content', get_post_format() ), get_post_format() );
 
+  ?>
+    <div id="stories">
+      <?php
+
+      $loop = new WP_Query( array( 'post_type' => 'weaver', 'ignore_sticky_posts' => 1) );
+      if ( $loop->have_posts() ) :
+        while ( $loop->have_posts() ) : $loop->the_post();
+          $page_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
+          setup_postdata( $post);
+
+          ?>
+          <a class="page-link" href="<?php the_permalink(); ?>">
+            <div class="page-thumbnail" style="background-image: url('<?php echo
+            $page_image; ?>')">
+
+            </div>
+            <h4><?php the_title(); ?></h4>
+          </a>
+          <?php
+          wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
+
+        endwhile;
+      endif;
+
+      ?>
+    </div>
+
+  <?php
+
+  if( is_active_sidebar( 'content-widget-area' ) ) :
+    dynamic_sidebar( 'content-widget-area' );
+  endif;
+
   // If comments are open or we have at least one comment, load up the comment template.
   if ( ! is_front_page() && ( comments_open() || get_comments_number() ) ) {
     comments_template();

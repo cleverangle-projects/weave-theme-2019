@@ -25,6 +25,10 @@ while ( have_posts() ) {
 
   get_template_part( apply_filters( 'rhodos_filter_get_template_part', 'content', get_post_format() ), get_post_format() );
 
+
+  if( is_active_sidebar( 'content-widget-area' ) ) :
+    dynamic_sidebar( 'content-widget-area' );
+  endif;
   // If comments are open or we have at least one comment, load up the comment template.
   if ( ! is_front_page() && ( comments_open() || get_comments_number() ) ) {
     comments_template();
