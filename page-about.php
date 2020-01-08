@@ -21,7 +21,7 @@ while ( have_posts() ) {
 
   ?>
   <div id="staff" class="page-links">
-<!--    <h2>The Weave Team</h2>-->
+    <h2>The Weave Team</h2>
     <?php
 
     $loop = new WP_Query( array( 'post_type' => 'team', 'ignore_sticky_posts' => 1) );
@@ -31,7 +31,13 @@ while ( have_posts() ) {
         setup_postdata( $post);
 
         ?>
+        <a class="page-link roll-link" href="<?php the_permalink(); ?>">
+          <div class="page-thumbnail" style="background-image: url('<?php echo
+          $page_image; ?>')">
 
+          </div>
+          <h4><?php the_title(); ?></h4>
+        </a>
         <?php
         wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
 
