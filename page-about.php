@@ -35,9 +35,11 @@ while ( have_posts() ) {
           <div class="staff-wrapper">
           <div class="page-thumbnail" style="background-image: url('<?php echo
           $page_image; ?>')">
+
           </div>
           </div>
           <h4><?php the_title(); ?></h4>
+          <p class="quote"><?php echo get_field('field_5e15f8d365ec3') ?></p>
         </div>
 
         <?php
