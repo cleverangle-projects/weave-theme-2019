@@ -31,13 +31,13 @@ while ( have_posts() ) {
         setup_postdata( $post);
 
         ?>
-        <a class="page-link roll-link" href="<?php the_permalink(); ?>">
+        <div class="page-link roll-link">
           <div class="page-thumbnail" style="background-image: url('<?php echo
           $page_image; ?>')">
 
           </div>
           <h4><?php the_title(); ?></h4>
-        </a>
+        </div>
         <?php
         wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
 
