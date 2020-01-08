@@ -240,6 +240,24 @@
   #staff,
   #stories {
     padding-top: 0;
+
+    h2 {
+      display: block;
+      text-align: left;
+    }
+  }
+
+  #staff {
+    &:before {
+      content: "The Weave Team";
+      display: block;
+      width: 100%;
+      color: #000;
+      font-family: AvenirNext-Bold !important;
+      font-size: 2.5em;
+      font-weight: 700;
+
+    }
   }
 }
 
