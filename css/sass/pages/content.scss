@@ -262,9 +262,10 @@
     }
   }
 
-  .page-link:hover {
-    transofrm: none;
-    &:after {
+  .page-link{
+    transform: none;
+    &:after,
+    &:hover:after {
       background: none !important;
     }
   }
