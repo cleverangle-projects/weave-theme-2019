@@ -15,6 +15,51 @@
 /* =Theme customization starts here
 -------------------------------------------------------------- */
 
+body {
+    font-size: 14px !important;
+}
+
+@media (max-width: 767px) {
+    #content-boxes #newsletter-signup .box-wide > div {
+        width: 90%;
+        margin: 0 auto;
+    }
+    header#header #branding #logo img {
+        margin: 16px 2.5vw !important;
+    }
+
+    .weaver-template-default article .post_content iframe, .page-template-default article .post_content iframe {
+        max-width: 100%;
+        margin: 0;
+        height: 33vh;
+    }
+}
+.wFormContainer input[type="submit"], .wFormContainer #submit_button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+.errMsg {
+    font-family: 'Nunito',sans-serif !important;
+}
+
+.wFormContainer .oneField input:not([type="file"]), .wFormContainer .inputWrapper textarea, .wFormContainer .inputWrapper select {
+    height: 2.25em;
+}
+
+/* ---- snip ---- */
+
+
+#content-boxes .box-type-col_two_box .box-wide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 15px;
+}
 
 @media (max-width: 767px) {
     header#header {
