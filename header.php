@@ -16,7 +16,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>q
+<body <?php body_class(); ?>>
 
   <?php do_action( 'rhodos_action_before_body' ); ?>
   <div class="body_wrap">

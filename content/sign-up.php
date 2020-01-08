@@ -60,6 +60,31 @@
   if (FAoldJQ) $ = FAoldJQ;
 </script>
 
+<style type="text/css">
+
+  .wFormContainer input[type="submit"], .wFormContainer #submit_button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+
+  .errMsg {
+    font-family: 'Nunito',sans-serif !important;
+    padding: 0;
+  }
+
+  .wFormContainer .oneField input:not([type="file"]), .wFormContainer .inputWrapper textarea, .wFormContainer .inputWrapper select {
+    height: 2.25em;
+  }
+
+  body.form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
 <link href="<?php echo get_stylesheet_directory_uri() ?>/css/styles.css" rel="stylesheet"
@@ -67,7 +92,7 @@
 
 <!-- FORM: BODY SECTION -->
 <body class="form-wrapper">
-<div class="wFormContainer" >
+<div class="wFormContainer" id="wFormContainer" >
   <div class="wFormHeader"></div>
   <style type="text/css">
     #tfa_106,
@@ -200,5 +225,16 @@
 
     console.log(window.parent);
   }
+</script>
+
+<script>
+  sendHeight = function(){
+    tfaForm =  document.getElementById('wFormContainer');
+    selectedOption = document.getElementById('tfa_106');
+    console.log(tfaForm);
+    window.parent.postMessage({"height": tfaForm.offsetHeight, "value": selectedOption.value}, "*")
+  }
+
+  document.getElementById("tfa_106").addEventListener("change", sendHeight);
 </script>
 </body>

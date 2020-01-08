@@ -78,7 +78,7 @@ endif;
     <a class="twitter-btn" href="https://twitter.com/weavetheppl" target="_blank" alt="Twitter"></a>
 <!--    <a class="ig-btn" href="https://www.instagram.com/weavesocialfabric/" target="_blank" -->
 <!--       alt="Instagram"></a>-->
-    <a class="email-btn" href="" target="_blank" alt="Email"></a>
+    <a class="email-btn" href="/contact-us" alt="Contact Us"></a>
   </div>
   <div>
     <img id="logo-rev" src="<?php echo $brand_logo_rev; ?>" alt="">

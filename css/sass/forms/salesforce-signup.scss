@@ -169,3 +169,13 @@ body.form-wrapper {
 
   }
 }
+
+.errMsg {
+  font-family: 'Nunito',sans-serif !important;
+}
+
+#tfa_105-E.errMsg {
+  display: none !important;
+  height:  0 !important;
+  line-height: 0 !important;
+}

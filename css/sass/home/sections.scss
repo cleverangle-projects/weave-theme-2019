@@ -271,6 +271,11 @@
 
       @media (max-width: 767px) {
         width: 90%;
+
+        > div {
+          width: 90%;
+          margin: 0 auto;
+        }
       }
 
       .highlighted {
@@ -279,10 +284,10 @@
     }
 
     iframe {
-      height: 50vh !important;
+      height: 50vh;
 
       @media (max-width: 767px) {
-        height: 80vh !important;
+        height: 92vh;
       }
     }
   }

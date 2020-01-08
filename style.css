@@ -50,11 +50,12 @@ footer#footer #logo-rev {
 }
 
 #we-can-heal .box-wide {
-    max-width: 1024px !important;
+    /*max-width: 1024px !important;*/
 }
 
 #content-boxes #we-are-weavers {
     /*     margin-top: 70px; */
+
 }
 
 video::-webkit-media-controls {

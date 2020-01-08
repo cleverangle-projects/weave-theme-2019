@@ -105,6 +105,21 @@
     }
   });
 
+  window.addEventListener("message", function(event) {
+
+
+    iframeH = $('#signup');
+    formH = event.data['height'];
+    optionSel = event.data['value'];
+
+    console.log(event.data);
+    console.log(iframeH.height());
+
+    if ((formH > iframeH.height() + 10) && (optionSel == 'tfa_109')) {
+      $('#signup').css('height', formH + 100 + 'px');
+      console.log('new height:' + iframeH.height());
+    }
+  });
 
 })( jQuery );
 
@@ -128,9 +143,7 @@ function reloadIframe(obj) {
   }
 }
 
-window.addEventListener("message", function(event) {
-  console.log('logging iframe messages');
-});
+
 
 
 
