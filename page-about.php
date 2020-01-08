@@ -36,7 +36,7 @@ while ( have_posts() ) {
           $page_image; ?>')">
 
           </div>
-          <h4><?php the_title(); ?></h4>
+          <h5><?php the_title(); ?></h5>
         </div>
         <?php
         wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly

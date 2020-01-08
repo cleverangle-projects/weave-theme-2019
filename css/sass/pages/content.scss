@@ -262,8 +262,11 @@
     }
   }
 
-  .page-link:hover:after {
-    background: none !important;
+  .page-link:hover {
+    transofrm: none;
+    &:after {
+      background: none !important;
+    }
   }
 }
 
