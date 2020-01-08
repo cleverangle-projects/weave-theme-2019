@@ -30,7 +30,7 @@ while ( have_posts() ) {
           setup_postdata( $post);
 
           ?>
-          <a class="page-link" href="<?php the_permalink(); ?>">
+          <a class="page-link roll-link" href="<?php the_permalink(); ?>">
             <div class="page-thumbnail" style="background-image: url('<?php echo
             $page_image; ?>')">
 
