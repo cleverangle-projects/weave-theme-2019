@@ -122,3 +122,15 @@ function add_toolbar_items($wp_admin_bar) {
 }
 
 add_action('admin_bar_menu', 'add_toolbar_items', 999);
+
+function content_widgets_init() {
+  register_sidebar( array(
+      'name' => __( 'Content Widget Area', 'rhodos' ),
+      'id' => 'content-widget-area',
+      'before_widget' => '<div>',
+      'after_widget' => '</div>',
+      'before_title' => '<span style="display: none!important;">',
+      'after_title' => '</span>',
+  ) );
+}
+add_action( 'widgets_init', 'content_widgets_init' );
