@@ -315,8 +315,16 @@
 }
 
 .team-template-default {
-  #hero h1 {
-    display: none;
+  #hero {
+    background-position: top center;
+    height: 75vh;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    h1 {
+      display: none;
+    }
+
   }
 
   .bio {
@@ -344,6 +352,7 @@
 
     + article {
       padding-top: 1.5em;
+      min-height: 15vh;
     }
   }
 }
