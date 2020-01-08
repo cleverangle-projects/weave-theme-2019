@@ -20,7 +20,7 @@ while ( have_posts() ) {
   get_template_part( apply_filters( 'rhodos_filter_get_template_part', 'content', get_post_format() ), get_post_format() );
 
   ?>
-    <div id="stories">
+    <div id="stories" class="page-links">
       <?php
 
       $loop = new WP_Query( array( 'post_type' => 'weaver', 'ignore_sticky_posts' => 1) );
