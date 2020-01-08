@@ -331,6 +331,10 @@
     min-height: auto;
     padding-bottom: 10vh;
 
+    @media (min-width: 1280px) {
+      margin-top: -4vh;
+    }
+
     h1 {
       margin-top: -1em;
       padding-top: 1em;
