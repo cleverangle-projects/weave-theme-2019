@@ -31,13 +31,15 @@ while ( have_posts() ) {
         setup_postdata( $post);
 
         ?>
-        <div class="page-link roll-link">
-          <div class="page-thumbnail" style="background-image: url('<?php echo
-          $page_image; ?>')">
+        <div>
+          <div class="page-link roll-link">
+            <div class="page-thumbnail" style="background-image: url('<?php echo
+            $page_image; ?>')">
 
+            </div>
           </div>
+          <h4><?php the_title(); ?></h4>
         </div>
-        <h4><?php the_title(); ?></h4>
         <?php
 
       endwhile;
