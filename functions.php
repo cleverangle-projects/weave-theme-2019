@@ -83,6 +83,15 @@ function weave_button_shortcode( $atts, $content = null ) {
 }
 add_shortcode( 'button', 'weave_button_shortcode' );
 
+function weave_btn_func( $atts ) {
+  $a = shortcode_atts( array(
+      'link' => '',
+      'text' => 'Try it Out',
+      'color' => 'green',
+  ), $atts );
+  return '<a style="background-color:' . $a['color'] . ';" class="weave-button" href="' . $a['link'] . '">' . $a['text'] . '</a>';
+}
+add_shortcode( 'weave-btn', 'weave_btn_func' );
 
 function weaver_post_type() {
   register_post_type( 'weaver',

@@ -62,6 +62,7 @@
     if (this.status === 200) {
 
       var videoBlob = this.response;
+      console.log(this.response);
       var vid = URL.createObjectURL(videoBlob); // IE10+
       // Video is now downloaded
       // and we can set it as source on the video element
@@ -81,6 +82,29 @@
   req.onerror = function() {
     // Error
   }
+
+  // req.onprogress = function(e){
+  //     if(e.lengthComputable) {
+  //       var percentComplete = ((e.loaded/e.total)*100|0) + '%';
+  //       percentComplete = parseInt(percentComplete, 10);
+  //       console.log('progress: ', percentComplete);
+  //
+  //       if (percentComplete > 50) {
+  //         console.log("ready to play");
+  //         console.log(this.response);
+  //         var videoBlob = this.response;
+  //         var vid = URL.createObjectURL(videoBlob); // IE10+
+  //         // Video is now downloaded
+  //         // and we can set it as source on the video element
+  //         video.src = vid;
+  //         setTimeout(function() {
+  //           $('body').removeClass('is-loading');
+  //
+  //           video.play();
+  //         }, 500);
+  //       }
+  //     }
+  // }
   req.send();
 
   // More Stories
