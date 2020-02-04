@@ -101,7 +101,6 @@ function weave_squares_func( $atts ) {
       'all' => false,
       'more' => true,
   ), $atts );
-//  return '<a style="background-color:' . $a['color'] . ';" class="weave-button" href="' . $a['link'] . '">' . $a['text'] . '</a>';
 
   ob_start() ?>
     <div class="page-links weave-boxes <?php echo $a['type'] ?>">

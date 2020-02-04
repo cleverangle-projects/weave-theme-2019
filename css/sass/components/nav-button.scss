@@ -1,7 +1,7 @@
 header#header #hamburger-btn {
   display: none;
   position: absolute;
-  top: 16px;
+  top: 24px;
   right: 16px;
   height: 28px;
   width: 32px;
@@ -41,6 +41,10 @@ header#header #hamburger-btn {
       opacity: 0;
       transition: 250ms opacity 250ms;
     }
+  }
+
+  @media (max-width: 767px) {
+    top: 16px;
   }
 
   &.open {
@@ -94,4 +98,8 @@ header#header #hamburger-btn {
       }
     }
   }
+}
+
+.scriptlesssocialsharing {
+  clear: both;
 }
