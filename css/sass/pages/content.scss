@@ -61,7 +61,9 @@
   .nav-links-single,
   .related_wrap,
   #stories,
-  #staff {
+  #staff
+  .weave-stories,
+  {
     position: relative;
     width: 80%;
     max-width: 1024px;
@@ -244,6 +246,7 @@
   }
 }
 
+.page-template-page-join,
 .page-template-page-stories,
 .page-template-page-about {
   article {
@@ -251,6 +254,7 @@
     padding-bottom: 0;
   }
 
+  .weave-boxes,
   #staff,
   #stories {
     padding-top: 0;
@@ -261,22 +265,8 @@
     }
   }
 }
-
+.page-template-page-join,
 .page-template-page-about {
-  #staff {
-    &:before {
-      //content: "The Weave Team";
-      //display: block;
-      //width: 100%;
-      //margin-bottom: 1em;
-      //color: #000;
-      //font-family: AvenirNext-Bold !important;
-      //font-size: 2.5em;
-      //font-weight: 700;
-
-    }
-  }
-
   .page-link{
     transform: none;
     &:after,
@@ -290,7 +280,7 @@
     height: 40vh;
     max-height: 320px;
 
-    .staff-wrapper {
+    .team-wrapper {
       position: relative;
       height: 80%;
       width: 100%;

@@ -93,6 +93,52 @@ function weave_btn_func( $atts ) {
 }
 add_shortcode( 'weave-btn', 'weave_btn_func' );
 
+
+function weave_squares_func( $atts ) {
+  $a = shortcode_atts( array(
+      'type' => '',
+      'max' => '',
+      'all' => false,
+      'more' => true,
+  ), $atts );
+//  return '<a style="background-color:' . $a['color'] . ';" class="weave-button" href="' . $a['link'] . '">' . $a['text'] . '</a>';
+
+  ob_start() ?>
+    <div class="page-links weave-boxes <?php echo $a['type'] ?>">
+      <?php
+
+      $loop = new WP_Query(array('post_type' => $a['type'], 'ignore_sticky_posts' => 1));
+      if ($loop->have_posts()) :
+        while ($loop->have_posts()) : $loop->the_post();
+          $page_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID), 'thumbnail');
+          setup_postdata($post);
+
+          ?>
+          <a class="page-link roll-link" href="<?php the_permalink(); ?>">
+            <div class="<?php echo $a['type'] ?>-wrapper">
+              <div class="page-thumbnail" style="background-image: url('<?php echo
+              $page_image; ?>')">
+
+              </div>
+            </div>
+            <h4><?php the_title(); ?></h4>
+            <p class="quote"><?php echo get_field('field_5e15f8d365ec3') ?></p>
+          </a>
+
+        <?php
+
+        endwhile;
+      endif;
+      wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
+
+      ?>
+    </div>
+    <?php
+  $squares = ob_get_clean();
+  return $squares;
+}
+add_shortcode( 'weave-squares', 'weave_squares_func' );
+
 function weaver_post_type() {
   register_post_type( 'weaver',
 // CPT Options
