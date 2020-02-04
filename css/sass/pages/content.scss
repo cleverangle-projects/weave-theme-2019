@@ -396,3 +396,10 @@ body:not(.home) .content {
   }
 }
 
+.error404 {
+  .content {
+    background-image: none;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+}
