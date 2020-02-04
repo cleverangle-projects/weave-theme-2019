@@ -74,10 +74,34 @@
     @media (max-width: 767px) {
       //width: 90%;
       //padding: 0;
-      padding: 1em 0 !important;
-      width: 90%;
+      //padding: 1em 0 !important;
+      //width: 90%;
     }
   }
+
+  .page-template-donate {
+    article,
+    .nav-links-single,
+    .related_wrap,
+    #stories,
+    #staff
+    .weave-stories {
+      position: relative;
+      width: 80%;
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 5%;
+      background: #fff;
+
+      @media (max-width: 767px) {
+        //width: 90%;
+        //padding: 0;
+        //padding: 1em 0 !important;
+        //width: 90%;
+      }
+    }
+  }
+
   article {
     margin-top: -10vh;
     font-size: 18px;
