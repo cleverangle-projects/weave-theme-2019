@@ -198,7 +198,7 @@
   #tlaform {
     width: 80%;
     margin: 10vh auto 0;
-    background: $purple;
+    //background: $purple;
 
     p {
       width: 90%;
@@ -226,6 +226,13 @@
       text-align: left !important;
     }
   }
+}
+
+body:not(.home) .content {
+  background-image: url('./img/signup_bg.jpg');
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  background-position: bottom center;
 }
 
 #signup-copy {
