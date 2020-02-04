@@ -250,7 +250,9 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background: rgba(0, 0, 0, 0.5);
+      //background: rgba(0, 0, 0, 0.5);
+      background: radial-gradient(ellipse at left, transparent, rgba(0, 0, 0, 0.5)),
+      radial-gradient(ellipse at top, transparent, rgba(0, 0, 0, 0.5));
       z-index: 1
     }
   }
