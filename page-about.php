@@ -16,41 +16,7 @@ while ( have_posts() ) {
 
   <?php
 
-
   get_template_part( apply_filters( 'rhodos_filter_get_template_part', 'content', get_post_format() ), get_post_format() );
-
-  ?>
-  <div id="staff" class="page-links">
-    <?php
-
-    $loop = new WP_Query( array( 'post_type' => 'team', 'ignore_sticky_posts' => 1) );
-    if ( $loop->have_posts() ) :
-      while ( $loop->have_posts() ) : $loop->the_post();
-        $page_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
-        setup_postdata( $post);
-
-        ?>
-        <a class="page-link roll-link" href="<?php the_permalink(); ?>">
-          <div class="staff-wrapper">
-          <div class="page-thumbnail" style="background-image: url('<?php echo
-          $page_image; ?>')">
-
-          </div>
-          </div>
-          <h4><?php the_title(); ?></h4>
-          <p class="quote"><?php echo get_field('field_5e15f8d365ec3') ?></p>
-        </a>
-
-        <?php
-
-      endwhile;
-    endif;
-    wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
-
-    ?>
-  </div>
-
-  <?php
 
   if( is_active_sidebar( 'content-widget-area' ) ) :
     dynamic_sidebar( 'content-widget-area' );
