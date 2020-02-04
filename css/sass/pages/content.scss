@@ -429,3 +429,11 @@ body:not(.home) .content {
     margin-bottom: 10vh;
   }
 }
+
+.help-us-content {
+  ul li {
+    a {
+      color: $purple
+    }
+  }
+}
