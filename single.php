@@ -52,7 +52,9 @@ while ( have_posts() ) {
       );
       ?>
     </div>
+
     <?php
+
     endif;
   }
 
@@ -61,10 +63,6 @@ while ( have_posts() ) {
 //    do_action( 'rhodos_action_related_posts' );
 //  }
 
-  // If comments are open or we have at least one comment, load up the comment template.
-  if ( comments_open() || get_comments_number() ) {
-    comments_template();
-  }
 
   echo '<div id="tlaform">';
   echo '<p><span class="highlighted">Sign up for our newsletter</span> to receive updates on our work, invitations to get involved, including a future invitation to join our online community, and resources to support you and other Weavers.</p>';

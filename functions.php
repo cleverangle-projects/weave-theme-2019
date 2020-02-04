@@ -103,7 +103,7 @@ function weaver_post_type() {
           ),
           'show_in_rest' => true,
           'supports'  => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions',
-              'page-attributes'),
+              'comments', 'page-attributes'),
           'public' => true,
           'has_archive' => false,
           'menu_icon' => 'dashicons-universal-access-alt',
