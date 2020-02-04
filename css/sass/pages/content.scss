@@ -398,7 +398,7 @@ body:not(.home) .content {
 
 .error404 {
   .content {
-    background-image: none;
+    background-image: none !important;
     margin-top: 10vh;
     margin-bottom: 10vh;
   }
