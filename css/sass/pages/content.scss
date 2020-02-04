@@ -430,8 +430,8 @@ body:not(.home) .content {
   }
 }
 
-.help-us-content {
-  ul li {
+ul.help-us-content {
+  li {
     a {
       color: $purple
     }
