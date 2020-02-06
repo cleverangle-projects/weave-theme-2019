@@ -141,10 +141,10 @@
     .post_content iframe {
       max-width: 80%;
       margin: 0 10%;
-      max-height: 50vh;
+      //max-height: 50vh;
 
       @media (max-width: 767px) {
-        max-height: 180px;
+        //max-height: 180px;
       }
     }
   }
