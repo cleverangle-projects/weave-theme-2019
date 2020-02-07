@@ -1,3 +1,4 @@
+.page-template-page-team,
 .page-template-donate,
 .weaver-template-default,
 .team-template-default,
@@ -62,7 +63,8 @@
   .nav-links-single,
   .related_wrap,
   #stories,
-  #staff
+  #staff,
+  #weave-team,
   .weave-stories {
     position: relative;
     width: 80%;
@@ -70,6 +72,10 @@
     margin: 0 auto;
     padding: 5%;
     background: #fff;
+
+    .has-2-columns {
+      width: 100%;
+    }
 
     @media (max-width: 767px) {
       //width: 90%;
@@ -121,6 +127,7 @@
   }
 }
 
+.page-template-page-team,
 .weaver-template-default,
 .team-template-default,
 .page-template-default,
@@ -141,7 +148,7 @@
     .post_content iframe {
       max-width: 80%;
       margin: 0 10%;
-      //max-height: 50vh;
+      max-height: 50vh;
 
       @media (max-width: 767px) {
         max-height: 180px;
@@ -436,4 +443,8 @@ ul.help-us-content {
       color: $purple
     }
   }
+}
+
+.about-us-partners > div:last-child, .about-us-partners ~ .has-2-columns > div:last-child {
+  min-width: 60%;
 }
