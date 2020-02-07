@@ -109,11 +109,15 @@ function weave_squares_func( $atts ) {
       $loop = new WP_Query(array('post_type' => $a['type'], 'ignore_sticky_posts' => 1));
       if ($loop->have_posts()) :
         while ($loop->have_posts()) : $loop->the_post();
-          $page_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID), 'thumbnail');
           setup_postdata($post);
-
+          $page_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID), 'thumbnail');
+          $box_link = get_the_permalink();
+          if ($a['type'] == 'team') {
+            $box_link = '/team#' . $post->post_name;
+          }
+          
           ?>
-          <a class="page-link roll-link" href="<?php the_permalink(); ?>">
+          <a class="page-link roll-link" href="<?php echo $box_link ?>">
             <div class="<?php echo $a['type'] ?>-wrapper">
               <div class="page-thumbnail" style="background-image: url('<?php echo
               $page_image; ?>')">
@@ -121,7 +125,7 @@ function weave_squares_func( $atts ) {
               </div>
             </div>
             <h4><?php the_title(); ?></h4>
-            <p class="quote"><?php echo get_field('field_5e15f8d365ec3') ?></p>
+            <p class="title"><?php echo get_field('field_5e15f8d365ec3') ?></p>
           </a>
 
         <?php

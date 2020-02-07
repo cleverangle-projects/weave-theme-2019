@@ -30,13 +30,17 @@ while ( have_posts() ) {
         setup_postdata( $post);
 
         ?>
-        <div class="wp-block-columns has-2-columns" id="">
+        <div class="wp-block-columns has-2-columns" id="#<?php echo $post->post_name; ?>">
           <div class="wp-block-column">
             <?php echo get_the_post_thumbnail( $post->ID, 'medium', array( 'class' => 'aligncenter'
             ) ) ?>
           </div>
           <div class="wp-block-column">
-            <h4><?php the_title(); ?></h4>
+            <h3><?php the_title(); ?></h3>
+            <h5 class="title"><?php echo get_field('field_5e15f8d365ec3') ?></h5>
+            <p class="quote"><?php echo get_field('field_5e15f8d865ec4') ?></p>
+            <?php echo the_content() ?>
+
           </div>
         </div>
         <?php
