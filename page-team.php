@@ -41,7 +41,7 @@ while ( have_posts() ) {
             <h5 class="title"><?php echo get_field('field_5e15f8d365ec3') ?></h5>
             <p class="quote"><?php echo get_field('field_5e15f8d865ec4') ?></p>
             <?php echo the_content() ?>
-            <p><a href="mailto:<?php echo get_field('field_5e3d009a2626c') ?>">Email</a></p>
+            <a href="mailto:<?php echo get_field('field_5e3d009a2626c') ?>">Email</a>
           </div>
         </div>
         <?php
