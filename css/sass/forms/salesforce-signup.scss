@@ -179,3 +179,75 @@ body.form-wrapper {
   height:  0 !important;
   line-height: 0 !important;
 }
+
+.comments_form_wrap {
+  .comments_form {
+    input,
+    select,
+    option,
+    textarea {
+      font-family: 'Nunito';
+      font-size: 16px;
+      //color: #fff;
+      text-transform: none !important;
+      letter-spacing: 0;
+    }
+
+    textarea {
+      background: #041C33 !important;
+      color: #fff !important;
+    }
+
+    input {
+      color: #ddd !important;
+
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="hidden"],
+    span.twitter-typeahead,
+    select {
+      padding: 8px;
+      font-size: 16px;
+      background: #041C33 !important;
+      width: 100%;
+    }
+
+    span.twitter-typeahead {
+      padding: 0 !important;
+    }
+
+  }
+
+  .select,
+  .textarea {
+    width: 100% !important;
+    min-width: 100% !important;
+
+    select {
+      min-width: 95.5% !important;
+      color: #ddd;
+      -webkit-appearance: none;
+    }
+
+    input,
+    textarea {
+      min-width: 95.5% !important;
+      background: #041C33 !important;
+    }
+
+    option {
+      color: #fff;
+    }
+
+    @media (max-width: 767px) {
+
+      select {
+
+        height: 40px;
+        max-width: 228px !important;
+      }
+    }
+  }
+}
