@@ -30,7 +30,8 @@ while ( have_posts() ) {
         setup_postdata( $post);
 
         ?>
-        <div class="wp-block-columns has-2-columns" id="#<?php echo $post->post_name; ?>">
+        <div class="wp-block-columns has-2-columns team-member" id="<?php echo $post->post_name;
+        ?>">
           <div class="wp-block-column">
             <?php echo get_the_post_thumbnail( $post->ID, 'medium', array( 'class' => 'aligncenter'
             ) ) ?>
