@@ -294,5 +294,5 @@ function custom_dashboard_widgets() {
 }
 function custom_dashboard_contact() {
 // Widget Content Here
-  echo '<p>Welcome to your site! Need help? Contact CLEVERANGLE <a href="mailto:info@cleverangle.com">here</a>. </p>';
+  echo '<p>Welcome to your site! Need help? Please go <a href="https://docs.google.com/document/d/1CLYNw7qgzLcSKVbq4vTbr8nuGY84WhyicVRC27zR4yI/edit?usp=sharing">here</a>. </p>';
 }
