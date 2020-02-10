@@ -35,10 +35,26 @@ footer#footer {
 
     &.facebook-btn {
       background: url(./img/facebook.png);
+
+      &.gr {
+        background: url('./img/facebook_gr.png')
+      }
     }
     &.twitter-btn {
       background: url(./img/twitter.png);
+
+      &.gr {
+        background: url('./img/twitter_gr.png')
+      }
     }
+    &.ig-btn {
+      background: url(./img/instagram.png);
+
+      &.gr {
+          background: url('./img/instagram_gr.png')
+        }
+    }
+
     &.email-btn {
       background: url(./img/email.png);
     }

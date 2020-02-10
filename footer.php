@@ -76,8 +76,8 @@ endif;
   <div class="contact-links">
     <a class="facebook-btn" href="https://www.facebook.com/Weavesocialfabric" target="_blank" alt="Facebook"></a>
     <a class="twitter-btn" href="https://twitter.com/weavetheppl" target="_blank" alt="Twitter"></a>
-<!--    <a class="ig-btn" href="https://www.instagram.com/weavesocialfabric/" target="_blank" -->
-<!--       alt="Instagram"></a>-->
+    <a class="ig-btn" href="https://www.instagram.com/weavesocialfabric/" target="_blank"
+       alt="Instagram"></a>
     <a class="email-btn" href="/contact-us" alt="Contact Us"></a>
   </div>
   <div>

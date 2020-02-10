@@ -49,49 +49,30 @@ function weave_customizer_settings($wp_customize) {
   );
 }
 
-function weave_button_shortcode( $atts, $content = null ) {
-  // Extract shortcode attributes
-  extract( shortcode_atts( array(
-      'url'    => '',
-      'title'  => '',
-      'target' => '',
-      'text'   => '',
-      'color'  => 'green',
-  ), $atts ) );
-  // Use text value for items without content
-  $content = $text ? $text : $content;
-  // Return button with link
-  if ( $url ) {
-    $link_attr = array(
-        'href'   => esc_url( $url ),
-        'title'  => esc_attr( $title ),
-        'target' => ( 'blank' == $target ) ? '_blank' : '',
-        'class'  => 'weave-button color-' . esc_attr( $color ),
-    );
-    $link_attrs_str = '';
-    foreach ( $link_attr as $key => $val ) {
-      if ( $val ) {
-        $link_attrs_str .= ' ' . $key . '="' . $val . '"';
-      }
-    }
-    return '<a' . $link_attrs_str . '><span>' . do_shortcode( $content ) . '</span></a>';
-  }
-  // No link defined so return button as a span
-  else {
-    return '<span class="weave-button"><span>' . do_shortcode( $content ) . '</span></span>';
-  }
-}
-add_shortcode( 'button', 'weave_button_shortcode' );
-
 function weave_btn_func( $atts ) {
   $a = shortcode_atts( array(
       'link' => '',
-      'text' => 'Try it Out',
-      'color' => 'green',
+      'text' => 'See More',
+      'color' => '#16783C',
+      'align' => 'center',
   ), $atts );
-  return '<a style="background-color:' . $a['color'] . ';" class="weave-button" href="' . $a['link'] . '">' . $a['text'] . '</a>';
+  return '<div class="weave-btn-wrap" style="text-align:' . $a['align'] . '"><a 
+  style="background-color:' .
+  $a['color'] . ';" class="weave-button" href="' . $a['link'] . '">' . $a['text'] . '</a></div>';
 }
 add_shortcode( 'weave-btn', 'weave_btn_func' );
+
+function weave_social_func( $atts ) {
+  $a = shortcode_atts( array(
+      'color' => 'gr',
+  ), $atts );
+  return '<div class="weave-btn-wrap contact-links" style="text-align:' . $a['align'] . '; margin-bottom: 2em"><a class="facebook-btn gr" href="https://www.facebook.com/Weavesocialfabric" target="_blank" alt="Facebook"></a>
+    <a class="twitter-btn gr" href="https://twitter.com/weavetheppl" target="_blank" alt="Twitter"></a>
+    <a class="ig-btn gr" href="https://www.instagram.com/weavesocialfabric/" target="_blank"
+       alt="Instagram"></a>
+  </div>';
+}
+add_shortcode( 'weave-social', 'weave_social_func' );
 
 
 function weave_squares_func( $atts ) {
