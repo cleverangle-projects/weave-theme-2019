@@ -109,21 +109,29 @@ function weave_squares_func( $atts ) {
           $box_link = get_the_permalink();
           if ($a['type'] == 'team') {
             $box_link = '/team#' . get_post_field( 'post_name', get_the_ID() );
-          }
 
-          ?>
-          <a class="page-link roll-link" href="<?php echo $box_link ?>">
-            <div class="<?php echo $a['type'] ?>-wrapper">
+            ?>
+            <a class="page-link roll-link" href="<?php echo $box_link ?>">
+              <div class="<?php echo $a['type'] ?>-wrapper">
+                <div class="page-thumbnail" style="background-image: url('<?php echo
+                $page_image; ?>')">
+
+                </div>
+              </div>
+              <h4><?php the_title(); ?></h4>
+              <p class="title"><?php echo get_field('field_5e15f8d365ec3') ?></p>
+            </a>
+
+        <?php } else { ?>
+
+            <a class="page-link home-link" href="<?php the_permalink(); ?>">
               <div class="page-thumbnail" style="background-image: url('<?php echo
               $page_image; ?>')">
 
               </div>
-            </div>
-            <h4><?php the_title(); ?></h4>
-            <p class="title"><?php echo get_field('field_5e15f8d365ec3') ?></p>
-          </a>
-
-        <?php
+              <h4><?php the_title(); ?></h4>
+            </a>
+            <?php }
 
         endwhile;
       endif;

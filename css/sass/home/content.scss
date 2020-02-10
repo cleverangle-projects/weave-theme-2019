@@ -215,6 +215,7 @@
     overflow: hidden;
     opacity: 1;
     transition: opacity 500ms;
+    text-align: center;
 
     &.incoming {
       opacity: 0;
