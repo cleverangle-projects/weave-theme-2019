@@ -282,3 +282,13 @@ function ecs_add_post_state( $post_states, $post ) {
   }
   return $post_states;
 }
+
+add_action('wp_dashboard_setup', 'custom_dashboard_widgets');
+function custom_dashboard_widgets() {
+  global $wp_meta_boxes;
+  wp_add_dashboard_widget('custom_contact_widget', 'CLEVERANGLE Support', 'custom_dashboard_contact');
+}
+function custom_dashboard_contact() {
+// Widget Content Here
+  echo '<p>Welcome to your site! Need help? Contact CLEVERANGLE <a href="mailto:info@cleverangle.com">here</a>. </p>';
+}
