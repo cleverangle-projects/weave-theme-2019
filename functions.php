@@ -81,13 +81,27 @@ function weave_squares_func( $atts ) {
       'max' => '',
       'all' => false,
       'more' => true,
+      'category' => ''
   ), $atts );
 
   ob_start() ?>
     <div class="page-links weave-boxes <?php echo $a['type'] ?>">
       <?php
 
-      $loop = new WP_Query(array('post_type' => $a['type']));
+      $loop = new WP_Query(
+          array(
+              'post_type' => $a['type']
+          )
+      );
+
+      if ($a['category']) {
+        $loop = new WP_Query(
+            array(
+                'post_type' => $a['type'],
+                'category_name' => $a['category']
+            )
+        );
+      };
       if ($loop->have_posts()) :
         while ($loop->have_posts()) : $loop->the_post();
           setup_postdata($post);
@@ -138,6 +152,7 @@ function weaver_post_type() {
           'has_archive' => false,
           'menu_icon' => 'dashicons-universal-access-alt',
           'rewrite' => array('slug' => 'weavers'),
+          'taxonomies' => array( 'category' ),
       )
   );
 }
