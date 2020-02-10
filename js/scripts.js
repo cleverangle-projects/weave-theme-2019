@@ -124,7 +124,7 @@
     setTimeout(function(){
       pageLink.removeClass('incoming');
       $('.page-links').removeClass('loading-new');
-    }, 4000)
+    }, 1000)
 
     if ( shownLinks > pageLink.length) {
       $(this).hide();
